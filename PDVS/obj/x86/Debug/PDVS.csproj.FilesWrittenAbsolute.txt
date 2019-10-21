@@ -1,0 +1,6 @@
+/home/luiz/Projetos/PayGo/pdvLinuxPayGoLibC_DotNetCoreCSharp/PDVS/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/luiz/Projetos/PayGo/pdvLinuxPayGoLibC_DotNetCoreCSharp/PDVS/obj/x86/Debug/PDVS.gtk-gui.gui.stetic
+/home/luiz/Projetos/PayGo/pdvLinuxPayGoLibC_DotNetCoreCSharp/PDVS/bin/Debug/PDVS.exe.mdb
+/home/luiz/Projetos/PayGo/pdvLinuxPayGoLibC_DotNetCoreCSharp/PDVS/bin/Debug/PDVS.exe
+/home/luiz/Projetos/PayGo/pdvLinuxPayGoLibC_DotNetCoreCSharp/PDVS/obj/x86/Debug/PDVS.exe
+/home/luiz/Projetos/PayGo/pdvLinuxPayGoLibC_DotNetCoreCSharp/PDVS/obj/x86/Debug/PDVS.exe.mdb

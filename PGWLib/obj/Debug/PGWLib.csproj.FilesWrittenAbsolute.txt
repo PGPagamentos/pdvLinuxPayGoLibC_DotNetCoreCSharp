@@ -1,0 +1,9 @@
+/home/luiz/Projetos/PayGo/pdvLinuxPayGoLibC_DotNetCoreCSharp/PGWLib/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/luiz/Projetos/PayGo/pdvLinuxPayGoLibC_DotNetCoreCSharp/PGWLib/obj/Debug/PGWLib.FormDisplayMessage.resources
+/home/luiz/Projetos/PayGo/pdvLinuxPayGoLibC_DotNetCoreCSharp/PGWLib/obj/Debug/PGWLib.FormMenu.resources
+/home/luiz/Projetos/PayGo/pdvLinuxPayGoLibC_DotNetCoreCSharp/PGWLib/obj/Debug/PGWLib.FormCurrencyData.resources
+/home/luiz/Projetos/PayGo/pdvLinuxPayGoLibC_DotNetCoreCSharp/PGWLib/obj/Debug/PGWLib.FormTypedData.resources
+/home/luiz/Projetos/PayGo/pdvLinuxPayGoLibC_DotNetCoreCSharp/PGWLib/bin/Debug/PGWLib.dll.mdb
+/home/luiz/Projetos/PayGo/pdvLinuxPayGoLibC_DotNetCoreCSharp/PGWLib/bin/Debug/PGWLib.dll
+/home/luiz/Projetos/PayGo/pdvLinuxPayGoLibC_DotNetCoreCSharp/PGWLib/obj/Debug/PGWLib.dll
+/home/luiz/Projetos/PayGo/pdvLinuxPayGoLibC_DotNetCoreCSharp/PGWLib/obj/Debug/PGWLib.dll.mdb

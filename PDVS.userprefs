@@ -1,0 +1,29 @@
+﻿<Properties StartupItem="PDVS/PDVS.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="PGWLib/PGWLib.cs">
+    <Files>
+      <File FileName="PDVS/MainWindow.cs" Line="1" Column="1" />
+      <File FileName="PGWLib/Interop.cs" Line="17" Column="1" />
+      <File FileName="PGWLib/PGWLib.cs" Line="4" Column="19" />
+      <File FileName="PGWLib/FormTypedData.cs" Line="1" Column="1" />
+      <File FileName="PGWLib/FormMenu.cs" Line="1" Column="1" />
+      <File FileName="PGWLib/FormDisplayMessage.cs" Line="1" Column="1" />
+      <File FileName="PGWLib/FormCurrencyData.cs" Line="1" Column="1" />
+      <File FileName="PGWLib/CustomObjects.cs" Line="1" Column="1" />
+      <File FileName="PGWLib/Enums.cs" Line="1" Column="1" />
+      <File FileName="PGWLib/FormTypedData.resx" Line="1" Column="1" />
+      <File FileName="PGWLib/FormTypedData.Designer.cs" Line="1" Column="1" />
+      <File FileName="PGWLib/FormMenu.Designer.cs" Line="1" Column="1" />
+      <File FileName="PGWLib/FormDisplayMessage.Designer.cs" Line="1" Column="1" />
+      <File FileName="PGWLib/FormCurrencyData.resx" Line="1" Column="1" />
+      <File FileName="PGWLib/FormCurrencyData.Designer.cs" Line="1" Column="1" />
+      <File FileName="PGWLib/FormDisplayMessage.resx" Line="1" Column="1" />
+      <File FileName="PGWLib/FormMenu.resx" Line="1" Column="1" />
+      <File FileName="PDVS/Program.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
