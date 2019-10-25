@@ -10,7 +10,14 @@ namespace PDVS
 			Application.Init ();
 			MainWindow win = new MainWindow ();
 			win.Show ();
-			Application.Run ();
+			try
+			{
+			  Application.Run ();
+			}
+			catch(Exception ex)
+			{
+				
+			}
 		}
 	}
 }

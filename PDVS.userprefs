@@ -1,29 +1,32 @@
 ﻿<Properties StartupItem="PDVS/PDVS.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="PGWLib/PGWLib.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="PDVS/MainWindow.cs">
     <Files>
-      <File FileName="PDVS/MainWindow.cs" Line="1" Column="1" />
-      <File FileName="PGWLib/Interop.cs" Line="17" Column="1" />
-      <File FileName="PGWLib/PGWLib.cs" Line="4" Column="19" />
-      <File FileName="PGWLib/FormTypedData.cs" Line="1" Column="1" />
-      <File FileName="PGWLib/FormMenu.cs" Line="1" Column="1" />
-      <File FileName="PGWLib/FormDisplayMessage.cs" Line="1" Column="1" />
-      <File FileName="PGWLib/FormCurrencyData.cs" Line="1" Column="1" />
+      <File FileName="PDVS/MainWindow.cs" Line="22" Column="1" />
+      <File FileName="PGWLib/Enums.cs" Line="235" Column="61" />
+      <File FileName="PGWLib/PGWLib.cs" Line="28" Column="1" />
+      <File FileName="PGWLib/Interop.cs" Line="1" Column="1" />
       <File FileName="PGWLib/CustomObjects.cs" Line="1" Column="1" />
-      <File FileName="PGWLib/Enums.cs" Line="1" Column="1" />
+      <File FileName="PGWLib/FormTypedData.cs" Line="1" Column="1" />
       <File FileName="PGWLib/FormTypedData.resx" Line="1" Column="1" />
       <File FileName="PGWLib/FormTypedData.Designer.cs" Line="1" Column="1" />
-      <File FileName="PGWLib/FormMenu.Designer.cs" Line="1" Column="1" />
-      <File FileName="PGWLib/FormDisplayMessage.Designer.cs" Line="1" Column="1" />
-      <File FileName="PGWLib/FormCurrencyData.resx" Line="1" Column="1" />
-      <File FileName="PGWLib/FormCurrencyData.Designer.cs" Line="1" Column="1" />
-      <File FileName="PGWLib/FormDisplayMessage.resx" Line="1" Column="1" />
-      <File FileName="PGWLib/FormMenu.resx" Line="1" Column="1" />
-      <File FileName="PDVS/Program.cs" Line="1" Column="1" />
+      <File FileName="PDVS/Program.cs" Line="17" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/home/luiz/Projetos/PayGo/pdvLinuxPayGoLibC_DotNetCoreCSharp/PDVS/MainWindow.cs" line="147" column="1" />
+      <Breakpoint file="/home/luiz/Projetos/PayGo/pdvLinuxPayGoLibC_DotNetCoreCSharp/PDVS/MainWindow.cs" line="185" column="1" />
+      <Breakpoint file="/home/luiz/Projetos/PayGo/pdvLinuxPayGoLibC_DotNetCoreCSharp/PDVS/MainWindow.cs" line="232" column="1" />
+      <Breakpoint file="/home/luiz/Projetos/PayGo/pdvLinuxPayGoLibC_DotNetCoreCSharp/PDVS/MainWindow.cs" line="186" column="1" />
+      <Breakpoint file="/home/luiz/Projetos/PayGo/pdvLinuxPayGoLibC_DotNetCoreCSharp/PDVS/MainWindow.cs" line="55" column="1" />
+      <Breakpoint file="/home/luiz/Projetos/PayGo/pdvLinuxPayGoLibC_DotNetCoreCSharp/PDVS/MainWindow.cs" line="257" column="4" />
+      <Breakpoint file="/home/luiz/Projetos/PayGo/pdvLinuxPayGoLibC_DotNetCoreCSharp/PDVS/Program.cs" line="11" column="1" />
+      <Breakpoint file="/home/luiz/Projetos/PayGo/pdvLinuxPayGoLibC_DotNetCoreCSharp/PDVS/Program.cs" line="12" column="1" />
+      <Breakpoint file="/home/luiz/Projetos/PayGo/pdvLinuxPayGoLibC_DotNetCoreCSharp/PDVS/Program.cs" line="15" column="1" />
+      <Breakpoint file="/home/luiz/Projetos/PayGo/pdvLinuxPayGoLibC_DotNetCoreCSharp/PDVS/Program.cs" line="17" column="10" />
+      <Breakpoint file="/home/luiz/Projetos/PayGo/pdvLinuxPayGoLibC_DotNetCoreCSharp/PDVS/Program.cs" line="20" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

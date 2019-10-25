@@ -4,3 +4,5 @@
 /home/luiz/Projetos/PayGo/pdvLinuxPayGoLibC_DotNetCoreCSharp/PDVS/bin/Debug/PDVS.exe
 /home/luiz/Projetos/PayGo/pdvLinuxPayGoLibC_DotNetCoreCSharp/PDVS/obj/x86/Debug/PDVS.exe
 /home/luiz/Projetos/PayGo/pdvLinuxPayGoLibC_DotNetCoreCSharp/PDVS/obj/x86/Debug/PDVS.exe.mdb
+/home/luiz/Projetos/PayGo/pdvLinuxPayGoLibC_DotNetCoreCSharp/PDVS/bin/Debug/PGWLib.dll
+/home/luiz/Projetos/PayGo/pdvLinuxPayGoLibC_DotNetCoreCSharp/PDVS/bin/Debug/PGWLib.dll.mdb

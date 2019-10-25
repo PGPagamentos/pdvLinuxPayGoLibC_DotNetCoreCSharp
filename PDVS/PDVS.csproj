@@ -65,9 +65,15 @@
   <ItemGroup>
     <Compile Include="gtk-gui\generated.cs" />
     <Compile Include="MainWindow.cs" />
-    <Compile Include="gtk-gui\MainWindow.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="gtk-gui\PDVS.MainWindow.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\PGWLib\PGWLib.csproj">
+      <Project>{6F5EAD91-2CD7-45AB-B1FF-0700F71E75A2}</Project>
+      <Name>PGWLib</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
