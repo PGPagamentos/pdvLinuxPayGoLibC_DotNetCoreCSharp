@@ -17,4 +17,5 @@ sudo apt-get install monodevelop
           - copiar a so  PGWebLib.so  para /usr/lib
           - copiar certificado certificado.crt para o diretoŕio de execução da aplicação
 - Para fazer a instalação clicar no botão instala da aplicação.
--
+- OBS :  antes de instalar deletar diretório PGWebLib que fica no diretorio de execucao da aplicacao
+
