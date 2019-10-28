@@ -1,7 +1,7 @@
 
 Instruções atualizadas para executar o aplicativo no Ubuntu:
 
-1) O link abaixo tem as instruções para instalar o mono-develop (compilador :decepcionado:
+1) O link abaixo tem as instruções para instalar o mono-develop (compilador )
 https://www.mono-project.com/download/stable/
 - Para instalar a IDE :
 sudo apt-get install monodevelop
