@@ -3,9 +3,9 @@ Instruções atualizadas para executar o aplicativo no Ubuntu:
 
 1) O link abaixo tem as instruções para instalar o mono-develop (compilador :decepcionado:
 https://www.mono-project.com/download/stable/
-b) Para instalar a IDE :
+- Para instalar a IDE :
 sudo apt-get install monodevelop
-c) Para configurar o ambiente de execução
+- Para configurar o ambiente de execução
    Entrar num  terminal.
    digitar: su e informar senha do root.
    PINPAD :
@@ -16,5 +16,5 @@ c) Para configurar o ambiente de execução
           - digitar: su e informar senha do root.
           - copiar a so  PGWebLib.so  para /usr/lib
           - copiar certificado certificado.crt para o diretoŕio de execução da aplicação
-     d) Para fazer a instalação clicar no botão instala da aplicação.
-     e)
+- Para fazer a instalação clicar no botão instala da aplicação.
+-
