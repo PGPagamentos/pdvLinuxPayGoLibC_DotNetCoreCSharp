@@ -19,4 +19,4 @@ sudo apt-get install monodevelop
 - Para fazer a instalação clicar no botão instala da aplicação.
 - OBS :  antes de instalar deletar diretório PGWebLib que fica no diretorio de execucao da aplicacao
 
-2) Para Testar a Venda Selecionar PWOPER_SALE no combo box PWINFO_OPERATION e ativar botão <Executa>
+2) Para Testar a Venda Selecionar PWOPER_SALE no combo box PWINFO_OPERATION e ativar botão Executa
