@@ -140,6 +140,7 @@ namespace PDVS
 			WriteLog ("----------------");
 			WriteLog ("executeTransaction :" + operation.ToString());
 
+
 	        /////////////////////////////////
 
 
@@ -189,6 +190,9 @@ namespace PDVS
 			WriteLog ("----------------");
 			WriteLog ("confirmUndoTransaction ");
 
+
+
+
 			foreach (PGWLib.CustomObjects.PW_Parameter item in transactionResult)
 			{
 				if(item.parameterCode == (uint)PGWLib.Enums.E_PWINFO.PWINFO_CNFREQ & item.parameterValue == "1")
@@ -212,6 +216,9 @@ namespace PDVS
 				}
 			}
 
+			WriteLog ("----------------");
+			WriteLog ("Transacao OK");
+			LogaTransactionResult();
 			return ret;
 
 		}
@@ -274,7 +281,8 @@ namespace PDVS
 			return ret;
 		}
 
-		
+
+		// retorna lista com resultado da transação e loga as informacoes
 		public List<PW_Parameter> getTransactionResult()
 		{
 			List<PW_Parameter> ret = new List<PW_Parameter>();
@@ -286,6 +294,7 @@ namespace PDVS
 
 		}
 
+		// loga as informacaoes de retorno da ultima transacao
 		public void  LogaTransactionResult()
 		{
 			List<PW_Parameter> ret = new List<PW_Parameter>();
@@ -297,7 +306,7 @@ namespace PDVS
 
 		}
 
-
+		// escreve no log
 		public void  WriteLog(string sMessage)
 		{
 			DllLogListStore.AppendValues(sMessage);	

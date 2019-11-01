@@ -218,7 +218,7 @@ namespace PGWLib
                 PW_GetData[] structParam = new PW_GetData[10];
                 short paramAmount = 10;
                 ret = (int)Interop.PW_iExecTransac(structParam, ref paramAmount);
-                Debug.Print(string.Format("CALLED iExecTransac COM RETORNO {0}", ret.ToString()));
+                //Debug.Print(string.Format("CALLED iExecTransac COM RETORNO {0}", ret.ToString()));
                 /* teste de confirmacao @@@@
                 switch (ret)
                 {
