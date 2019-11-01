@@ -65,20 +65,14 @@ namespace PGWLib
         {
             List<PW_Parameter> ret = new List<PW_Parameter>();
 
-            string message = string.Empty;
-
             foreach (E_PWINFO item in Enum.GetValues(typeof(E_PWINFO)).Cast<E_PWINFO>())
             {
                 StringBuilder value = new StringBuilder(10000);
                 int getInfoRet = Interop.PW_iGetResult((short)item, value, 10001);
-                if (getInfoRet == 0) ret.Add(new PW_Parameter(item.ToString(), (ushort)item, value.ToString()));
-                if (getInfoRet == 0 && item == E_PWINFO.PWINFO_RESULTMSG) message = value.ToString();
+                if (getInfoRet == 0) ret.Add(new PW_Parameter(item.ToString(), (ushort)item, value.ToString()));               
 
             }
-
-            FormDisplayMessage fdm = new FormDisplayMessage();
-            fdm.Show(message, 3000);
-
+				
             return ret;
         }
 

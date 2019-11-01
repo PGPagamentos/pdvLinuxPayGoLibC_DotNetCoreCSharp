@@ -68,6 +68,10 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="gtk-gui\PDVS.MainWindow.cs" />
+    <Compile Include="ConfirmationWindow.cs" />
+    <Compile Include="gtk-gui\PDVS.ConfirmationWindow.cs" />
+    <Compile Include="ConfirmationWindowDialog.cs" />
+    <Compile Include="gtk-gui\PDVS.ConfirmationWindowDialog.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

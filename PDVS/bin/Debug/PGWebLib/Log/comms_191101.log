@@ -1,0 +1,281 @@
+14:03:36:526 PW_Init(/home/luiz/Projetos/PayGo/pdvLinuxPayGoLibC_DotNetCoreCSharp/PDVS/bin/Debug/PGWebLib)
+14:03:36:526 Ultima limpeza: 31/10/2019 17:56:06)
+14:03:37:696 [PGWebLib] PP_Treatment Selecionado: [1]
+14:04:00:140 PW_iNewTransac(33, 0004.0000.0064.0000)
+14:04:00:216 CONNECT ====================================================================
+14:04:00:216 Resolvendo o host (app.tpgw.ntk.com.br)
+14:04:00:237 Conectando com o host (app.tpgw.ntk.com.br), IP (200.155.8.203:17502)
+14:04:00:237 CAFile = /home/luiz/Projetos/PayGo/pdvLinuxPayGoLibC_DotNetCoreCSharp/PDVS/bin/Debug/certificado.crt
+14:04:00:561 depth=1 /C=BR/ST=SAO PAULO/L=SAO PAULO/O=SETIS AUTOMACAO E SISTEMAS LTDA/OU=DESENVOLVIMENTO/CN=SETIS CA TEST/emailAddress=contato@setis.com.br
+14:04:00:562 verify return:1
+14:04:00:562 depth=0 /C=BR/ST=SAO PAULO/L=SAO PAULO/O=SETIS AUTOMACAO E SISTEMAS LTDA/OU=DESENVOLVIMENTO/CN=*.tpgw.ntk.com.br/emailAddress=contato@setis.com.br
+14:04:00:562 verify return:1
+14:04:00:614 Certificado auto-assinado
+14:04:00:614 Nome do Subject: /C=BR/ST=SAO PAULO/L=SAO PAULO/O=SETIS AUTOMACAO E SISTEMAS LTDA/OU=DESENVOLVIMENTO/CN=*.tpgw.ntk.com.br/emailAddress=contato@setis.com.br
+14:04:00:614 Nome do emissor: /C=BR/ST=SAO PAULO/L=SAO PAULO/O=SETIS AUTOMACAO E SISTEMAS LTDA/OU=DESENVOLVIMENTO/CN=SETIS CA TEST/emailAddress=contato@setis.com.br
+14:04:00:614 Validacao pelo OpenSSL
+14:04:00:614 OpenSSL OK: *.tpgw.ntk.com.br
+14:04:00:614 TLSv1.2 connect OK <NEW SESSION>!
+14:04:00:701 [PGWebLib] PP_Treatment Selecionado: [1]
+14:04:00:701 PW_iAddParam(21, PDVS)
+14:04:00:891 PW_iAddParam(22, 1.0)
+14:04:00:892 PW_iAddParam(23, NTK Solutions Ltda)
+14:04:00:892 PW_iAddParam(36, 28)
+14:04:02:227 PW_iAddParam(112, 02)
+14:04:03:804 PW_iExecTransac(0004.0000.0064.0000) <-2497>
+14:04:08:698 PW_iAddParam(54, 9)
+14:04:08:872 PW_iAddParam(53, BIN)
+14:04:08:872 PW_iAddParam(135, BIN)
+14:04:09:190 [PWOFF_iExecProcOff]=<-2497>, ModoEntradaCartao
+14:04:10:926 PW_iExecTransac(0004.0000.0064.0000) <-2497>
+14:04:12:941 PW_iAddParam(41, 02)
+14:04:13:160 [PWOFF_iExecProcOff]=<-2497>, ModoEntradaCartao
+14:04:14:789 PW_iExecTransac(0004.0000.0064.0000) <-2497>
+14:04:14:790 PW_iPPGetCard(0)
+14:04:29:935 PW_iPPEventLoop OK()
+14:04:30:479 [PWOFF_iExecProcOff]=<-2497>, ValorTotal
+14:04:31:862 PW_iExecTransac(0004.0000.0064.0000) <-2497>
+14:04:37:922 PW_iAddParam(37, 1200)
+14:04:38:102 [PWOFF_iExecProcOff]=<-2497>, ResOffline
+14:04:39:668 PW_iExecTransac(0004.0000.0064.0000) <-2497>
+14:04:39:669 PW_iPPGoOnChip(0)
+14:04:49:556 PW_iPPEventLoop OK()
+14:04:49:710 [PWOFF_iExecProcOff]=PWRET_OK
+14:04:54:693 SSLState = 3 (SSL negotiation finished successfully)
+
+14:04:54:693 STATUS: CONNECTED
+14:04:57:783 TX[000853]: 02 24 00 03 4A 00 00 00 00 00 00 01 02 00 07 34 .$..J..........4
+                         01 02                                           ..               
+14:04:58:623 select = 1
+14:04:58:624 RX[000001]: 02 24 00 03 12 00 00 56 0C FB 89 01 04 00 00 00 .$.....V........
+                         07 02 01 A1 11 05 36 30 37 39 38 12 05 97 77 10 ......60798...w. 
+                         56 2F 25 02 12 00 26 02 03 DA 29 04 00 00 00 02 V/%...&...)..... 
+                         2A 14 56 49 53 41 20 44 45 42 49 54 4F 20 20 20 *.VISA DEBITO    
+                         20 20 20 20 20 20 32 03 91 43 60 35 03 42 49 4E       2..C`5.BIN 
+                         36 01 9F 38 0F 30 30 30 30 30 30 30 38 30 39 30 6..8.00000008090 
+                         30 30 30 30 41 04 00 00 00 08 42 15 0D 54 52 41 0000A.....B..TRA 
+                         4E 53 41 43 41 4F 20 41 55 54 4F 52 49 5A 41 44 NSACAO AUTORIZAD 
+                         41 43 04 00 00 01 11 44 07 31 35 36 32 37 31 30 AC.....D.1562710 
+                         45 09 30 30 30 30 31 38 31 37 35 46 06 30 31 38 E.000018175F.018 
+                         31 37 35 47 02 30 30 40 82 01 DA 1F 8B 08 00 00 175G.00@........ 
+                         00 00 00 04 00 DD 53 4D 8B DB 30 10 2D ED CD E0 ......SM..0.-... 
+                         FF 30 E7 40 B6 92 E3 6F C8 61 2C 2B 1B 6D 6D C9 .0.@...o.a,+.mm. 
+                         48 8A 61 7B 0B 6D 0F 0B 6D 73 28 4B EF FB 4B FB H.a{.m..ms(K..K. 
+                         53 2A D9 FB 11 67 1D 08 85 1E DA 77 11 92 DE 8C S*...g.....w.... 
+                         DE CC E8 E9 37 E6 E1 DD CF 10 26 E8 F0 F6 5A 41 ....7.....&...ZA 
+                         75 0B D2 7E 98 DE 84 41 18 C0 29 2A 21 5F 9D C1 u..~...A..)*!_.. 
+                         0B AF 17 08 4B E0 C6 62 C5 1B CE 44 CB A5 55 33 ....K..b...D..U3 
+                         3C 0F FF A0 51 CD CE 0A 25 CD 99 7C 00 7A 87 B0 <...Q...%..|.z.. 
+                         11 35 97 4C 28 D0 D8 2A 73 CC 33 A8 5C 05 BB 46 .5.L(..*s.3.\..F 
+                         C1 1C 88 C3 8A E4 69 18 70 56 92 11 39 29 86 F5 ......i.pV..9).. 
+                         91 62 B9 6E CB A7 B3 93 8A 63 5A D0 55 96 26 69 .b.n.....cZ.U.&i 
+                         11 A7 29 89 B2 89 42 DC D9 75 92 46 19 1D 33 B1 ..)...B..u.F..3. 
+                         7E ED 33 D0 9C 66 89 DB D6 8A AD F3 22 89 E3 22 ~.3..f......".." 
+                         0C 6A B4 58 52 4A E8 18 BA 55 DA 6D 63 12 27 47 .j.XRJ...U.mc.'G 
+                         09 D9 56 74 33 DD 86 9E CB 1A E7 1B E3 C5 6B 94 ..Vt3.........k. 
+                         06 99 EB 81 75 2D E7 5E 7E 8F 8D D2 E5 6C 37 06 ....u-.^~....l7. 
+                         D0 C8 97 39 0D 76 A5 28 2D 3E A2 7B 89 A9 16 0C ...9.v.(->.{.... 
+                         97 5B 9C 79 ED 2C 9E 79 4C F3 61 50 58 BB 1A A1 .[.y.,.yL.aPX... 
+                         42 C9 94 AA C0 E0 33 EF A4 C1 35 AF 84 55 73 99 B.....3...5..Us. 
+                         06 E0 E3 C8 C8 2A 22 94 C0 84 17 06 CB 0B 11 06 .....*"......... 
+                         29 C9 8A 1C 9E 92 91 02 BA 6B CD 37 FE 43 D0 71 )........k.7.C.q 
+                         82 61 20 55 CB 61 83 D2 A2 11 58 3A 61 8D E8 B9 .a U.a....X:a... 
+                         06 61 C3 80 C9 EE A6 84 88 5C 65 51 7A 45 92 E2 .a.......\eQzE.. 
+                         BD 8F 5B 66 C5 50 8D D3 B2 58 2C 00 DB 4A B8 9F ..[f.P...X,..J.. 
+                         CE 5D E0 38 0A E3 5C 80 5D 47 A2 E1 DA 0B B6 0F .].8..\.]G...... 
+                         6F 7F FD 55 EB 79 8C F6 63 CD 28 E6 3C EF 42 EB o.U.y..c.(.<.B. 
+                         DD EF 61 73 F7 F9 CB F7 4F 77 07 D0 FB 6F 87 1F ..as....Ow...o.. 
+                         C7 3C B3 3F 40 B7 BF FF 7A 78 2D 0A FE CC 7A FF .<.?@...zx-...z. 
+                         BB F9 5E BC 07 17 7A E5 1F FB E3 BF 01 41 92 10 ..^...z......A.. 
+                         CD 61 06 00 00 03 14 A5 73 C1 CC 60 D2 FE 90 C7 .a......s..`.... 
+                         50 EB 4D B4 33 1D B4 63 E6 A4 2E 3B 04 00 00 00 P.M.3..c...;.... 
+                         01 4B 0C 56 49 53 41 20 44 45 42 49 54 4F 20 C0 .K.VISA DEBITO . 
+                         04 00 00 00 04 61 3C 92 01 0A C9 01 00 CE 30 4F .....a<.......0O 
+                         84 82 95 9C 9F 03 9F 06 9F 10 9F 1A 9F 26 9F 27 .............&.' 
+                         9F 36 9F 37 9A 9F 02 5F 2A 5F 24 9F 34 9F 15 9F .6.7..._*_$.4... 
+                         33 5F 28 9F 35 9F 45 9B 9F 12 9F 11 5F 34 50 D7 3_(.5.E....._4P. 
+                         02 30 30 6A 07 20 19 11 01 14 04 57 6B 07 20 19 .00j. .....Wk. . 
+                         11 01 17 04 57 6C 01 00 F4 01 03 CF 01 08 86 0D ....Wl.......... 
+                         56 49 53 41 20 45 4C 45 43 54 52 4F 4E          VISA ELECTRON    
+14:05:14:758 FinishChip(0)
+14:05:23:920 DISCONNECT =================================================================
+14:05:23:920 >>LNXSSL_iModemDisconnect
+14:05:30:131 PW_iExecTransac(0004.0000.0064.0000) <-2497>
+14:05:30:135 PW_iPPRemoveCard()
+14:05:39:115 PW_iPPEventLoop OK()
+14:05:42:297 PW_iExecTransac(0004.0000.0064.0000) <0>
+14:05:42:297 0x02=33
+14:05:42:297 0x11=60798
+14:05:42:297 0x1B=app.tpgw.ntk.com.br:17502
+14:05:42:297 0x25=000000001200
+14:05:42:297 0x26=986
+14:05:42:297 0x29=2
+14:05:42:297 0x2A=VISA DEBITO         
+14:05:42:297 0x31=20191101140457
+14:05:42:297 0x32=0000914360
+14:05:42:297 0x35=BIN
+14:05:42:297 0x36=9
+14:05:42:298 0x38=000000080900000
+14:05:42:298 0x3B=1
+14:05:42:298 0x42=TRANSACAO AUTORIZADA
+14:05:42:298 0x43=1
+14:05:42:298 0x44=1562710
+14:05:42:298 0x45=000018175
+14:05:42:298 0x46=018175
+14:05:42:298 0x47=00
+14:05:42:298 0x4B=VISA DEBITO 
+14:05:42:298 0x53=              PAYGO BY NTK              
+
+                 BIN                  
+        VIA - ESTABELECIMENTO         
+            NTK SOLUTIONS             
+          RUA FIDENCIO RAMOS          
+SAO PAULO                     00003086
+EC:000000080900000       TERM:80900000
+
+           4191376569466027           
+AUT=562710     CV=000018175   DOC=895449
+DATA:1101      HORA:140457          CHIP
+                  VENDA          
+             TRANSACAO TESTE
+
+VALOR:                          1200
+    TRANSACAO AUTORIZADA COM SENHA    
+                                      
+       CREDENCIADORA BANCOOB SA       
+
+
+           DEBITO           
+            A0000000032010            
+
+----------------------------------------
+60798 0000000009 PGREF:0001562710
+NOME FANTASIA: DELIVER IT
+CNPJ: 20.726.059/0001-79
+
+   *** AMBIENTE DE TESTES - APP02 ***   
+
+14:05:42:298 0x54=              PAYGO BY NTK              
+
+                 BIN                  
+            VIA - CLIENTE             
+            NTK SOLUTIONS             
+          Rua Fidencio Ramos          
+Sao Paulo                     00003086
+EC:000000080900000       TERM:80900000
+
+
+           4191376569466027           
+AUT=562710     CV=000018175   DOC=895449
+DATA:1101      HORA:140457          CHIP
+                  VENDA          
+             TRANSACAO TESTE
+
+VALOR:                         1200
+       CREDENCIADORA BANCOOB SA       
+
+
+----------------------------------------
+60798 0000000009 PGREF:0001562710
+NOME FANTASIA: DELIVER IT
+CNPJ: 20.726.059/0001-79
+
+   *** AMBIENTE DE TESTES - APP02 ***   
+
+14:05:42:298 0x6C=0
+14:05:42:298 0x6F=   PROCESSANDO...
+14:05:42:298 0x74=      OPERACAO      CANCELADA
+14:05:42:298 0x75=    OPERACAO        CANCELADA   
+14:05:42:298 0xC0=4
+14:05:42:298 0xC2=0615
+14:05:42:298 0xC4=VISA ELECTRON
+14:05:42:298 0xCF=8
+14:05:42:298 0xF4=3
+14:05:42:299 0x7F01=1
+14:05:42:299 0x7F02=24
+14:05:42:299 0x7F04=191101150458
+14:05:42:299 0x7F0B=0
+14:05:42:382 [PGWebLib] PP_Treatment Selecionado: [1]
+14:05:57:205 PW_iConfirmation(289)
+14:05:58:702 PWSRV_iSendConfirmation <914360><1562710><0x121>
+14:05:58:810 [PGWebLib] PP_Treatment Selecionado: [1]
+14:06:00:541 piStatus = MODSTS_OFF
+14:06:00:541 STATUS: MODEM OFF
+14:06:00:541 CONNECT ====================================================================
+14:06:00:541 Resolvendo o host (app.tpgw.ntk.com.br)
+14:06:00:561 Conectando com o host (app.tpgw.ntk.com.br), IP (200.155.8.203:17502)
+14:06:00:561 CAFile = /home/luiz/Projetos/PayGo/pdvLinuxPayGoLibC_DotNetCoreCSharp/PDVS/bin/Debug/certificado.crt
+14:06:00:630 Certificado auto-assinado
+14:06:00:631 Nome do Subject: /C=BR/ST=SAO PAULO/L=SAO PAULO/O=SETIS AUTOMACAO E SISTEMAS LTDA/OU=DESENVOLVIMENTO/CN=*.tpgw.ntk.com.br/emailAddress=contato@setis.com.br
+14:06:00:631 Nome do emissor: /C=BR/ST=SAO PAULO/L=SAO PAULO/O=SETIS AUTOMACAO E SISTEMAS LTDA/OU=DESENVOLVIMENTO/CN=SETIS CA TEST/emailAddress=contato@setis.com.br
+14:06:00:631 Validacao pelo OpenSSL
+14:06:00:631 OpenSSL OK: *.tpgw.ntk.com.br
+14:06:00:631 TLSv1.2 connect OK <REUSED SESSION>!
+14:06:00:631 SSLState = 3 (SSL negotiation finished successfully)
+
+14:06:00:631 STATUS: CONNECTED
+14:06:00:631 TX[000602]: 02 24 00 02 4F 00 00 00 00 00 00 01 02 00 07 34 .$..O..........4
+                         01 02                                           ..               
+14:06:00:951 select = 1
+14:06:00:951 RX[000001]: 02 24 00 00 84 00 00 F9 08 09 87 01 04 00 00 00 .$..............
+                         07 02 01 80 11 05 36 30 37 39 38 12 05 89 90 07 ......60798..... 
+                         93 1F 32 03 91 43 61 41 04 00 00 00 01 42 15 0D ..2..CaA.....B.. 
+                         54 52 41 4E 53 41 43 41 4F 20 41 55 54 4F 52 49 TRANSACAO AUTORI 
+                         5A 41 44 41 43 04 00 00 00 01 03 14 A5 73 C1 CC ZADAC........s.. 
+                         60 D2 FE 90 C7 50 EB 4D B4 33 1D B4 63 E6 A4 2E `....P.M.3..c... 
+                         64 15 0D 54 52 41 4E 53 41 43 41 4F 20 41 55 54 d..TRANSACAO AUT 
+                         4F 52 49 5A 41 44 41 6A 07 20 19 11 01 14 06 00 ORIZADAj. ...... 
+                         6B 07 20 19 11 01 17 06 00 6C 01 00 F4 01 00    k. ......l.....  
+14:06:02:819 PWSRV_iSendConfirmation OK
+14:06:07:226 DISCONNECT =================================================================
+14:06:07:226 >>LNXSSL_iModemDisconnect
+14:07:13:243 PW_iNewTransac(0, 0004.0000.0064.0000)
+14:07:13:244 CONNECT ====================================================================
+14:07:13:245 Resolvendo o host (app.tpgw.ntk.com.br)
+14:07:13:266 Conectando com o host (app.tpgw.ntk.com.br), IP (200.155.8.203:17502)
+14:07:13:266 CAFile = /home/luiz/Projetos/PayGo/pdvLinuxPayGoLibC_DotNetCoreCSharp/PDVS/bin/Debug/certificado.crt
+14:07:13:336 Certificado auto-assinado
+14:07:13:336 Nome do Subject: /C=BR/ST=SAO PAULO/L=SAO PAULO/O=SETIS AUTOMACAO E SISTEMAS LTDA/OU=DESENVOLVIMENTO/CN=*.tpgw.ntk.com.br/emailAddress=contato@setis.com.br
+14:07:13:336 Nome do emissor: /C=BR/ST=SAO PAULO/L=SAO PAULO/O=SETIS AUTOMACAO E SISTEMAS LTDA/OU=DESENVOLVIMENTO/CN=SETIS CA TEST/emailAddress=contato@setis.com.br
+14:07:13:336 Validacao pelo OpenSSL
+14:07:13:337 OpenSSL OK: *.tpgw.ntk.com.br
+14:07:13:337 TLSv1.2 connect OK <REUSED SESSION>!
+14:07:13:705 [PGWebLib] PP_Treatment Selecionado: [1]
+14:07:13:705 PW_iAddParam(21, PDVS)
+14:07:13:707 PW_iAddParam(22, 1.0)
+14:07:13:708 PW_iAddParam(23, NTK Solutions Ltda)
+14:07:13:709 PW_iAddParam(36, 28)
+14:07:17:395 SSLState = 3 (SSL negotiation finished successfully)
+
+14:07:20:600 TX[000410]: 02 24 00 01 8F 00 00 00 00 00 00 01 02 00 07 34 .$.............4
+                         01 02                                           ..               
+14:07:20:685 select = 1
+14:07:20:685 RX[000001]: 02 24 00 00 67 00 00 0C D8 11 04 01 04 00 00 00 .$..g...........
+                         07 02 01 80 11 05 36 30 37 39 38 12 05 82 39 35 ......60798...95 
+                         78 4F 32 03 91 43 62 41 04 00 00 00 01 42 15 0D xO2..CbA.....B.. 
+                         20 20 20 20 20 20 54 45 53 54 45 20 4F 4B 20 20       TESTE OK   
+                         20 20 20 20 03 14 A5 73 C1 CC 60 D2 FE 90 C7 50     ...s..`....P 
+                         EB 4D B4 33 1D B4 63 E6 A4 2E 6A 07 20 19 11 01 .M.3..c...j. ... 
+                         14 07 20 6B 07 20 19 11 01 17 07 20 6C 01 00 F4 .. k. ..... l... 
+                         01 00                                           ..               
+14:07:31:144 DISCONNECT =================================================================
+14:07:31:144 >>LNXSSL_iModemDisconnect
+14:07:31:145 PW_iExecTransac(0004.0000.0064.0000) <-2497>
+14:07:31:149 PW_iPPRemoveCard()
+14:07:33:718 PW_iPPEventLoop OK()
+14:07:36:900 PW_iExecTransac(0004.0000.0064.0000) <0>
+14:07:36:901 0x11=60798
+14:07:36:901 0x1B=app.tpgw.ntk.com.br:17502
+14:07:36:901 0x31=20191101140720
+14:07:36:901 0x32=0000914362
+14:07:36:901 0x42=      TESTE OK      
+14:07:36:901 0x43=0
+14:07:36:901 0x6C=0
+14:07:36:901 0x6F=   PROCESSANDO...
+14:07:36:901 0x74=      OPERACAO      CANCELADA
+14:07:36:901 0x75=    OPERACAO        CANCELADA   
+14:07:36:905 0x7F01=1
+14:07:36:905 0x7F02=24
+14:07:36:905 0x7F04=191101150720
+14:07:36:905 0x7F0B=0
+14:07:37:292 [PGWebLib] PP_Treatment Selecionado: [1]
