@@ -18,6 +18,8 @@ namespace PDVS
 
 		PGWLib.PGWLib eft;
 		Gtk.ListStore DllLogListStore = new Gtk.ListStore (typeof (string));
+
+		Gtk.ListStore ParametersListStore = new Gtk.ListStore (typeof (string));
 		List<PGWLib.CustomObjects.PW_Parameter> listaParametros = new List<PGWLib.CustomObjects.PW_Parameter>();
 
 		public MainWindow () : base (Gtk.WindowType.Toplevel)
@@ -25,6 +27,7 @@ namespace PDVS
 			Build();
 
 			InicializaLogDll();
+			InicializaParameters();
 
 			eft = new PGWLib.PGWLib();
 			int ret;
@@ -51,6 +54,7 @@ namespace PDVS
 				i++;
 			}
 			addMandatoryParameters();
+
 
 
 
@@ -87,16 +91,56 @@ namespace PDVS
 		}
 
 
+		////////////////
+		// incializa treeview de parametros
+		public void InicializaParameters()
+		{
+
+			// cria a coluna associada a treeview
+			Gtk.TreeViewColumn ParametersColumn = new Gtk.TreeViewColumn ();
+			ParametersColumn.Title = "Parameters";
+
+
+			// cria a célula de texto que ira armazenar a informacao
+			Gtk.CellRendererText ParametersNameCell = new Gtk.CellRendererText ();
+
+			// Adiciona a celula a coluna
+			ParametersColumn.PackStart(ParametersNameCell, true);
+
+
+			// Indica a  celula o tipo de dado que será mostrado
+			ParametersColumn.AddAttribute(ParametersNameCell, "text", 0);
+
+
+			// adiciona a  coluna a  TreeView
+			trvPar.AppendColumn(ParametersColumn);
+
+			// associa o model a treeview
+			trvPar.Model =  ParametersListStore;
+
+		}
+
 		private void addMandatoryParameters()
 		{
 
-			listaParametros.Add(new PGWLib.CustomObjects.PW_Parameter(PGWLib.Enums.E_PWINFO.PWINFO_AUTNAME.ToString(), (int)PGWLib.Enums.E_PWINFO.PWINFO_AUTNAME, "PDVS"));
-			listaParametros.Add(new PGWLib.CustomObjects.PW_Parameter(PGWLib.Enums.E_PWINFO.PWINFO_AUTVER.ToString(),  (int)PGWLib.Enums.E_PWINFO.PWINFO_AUTVER, "1.0"));
-			listaParametros.Add(new PGWLib.CustomObjects.PW_Parameter(PGWLib.Enums.E_PWINFO.PWINFO_AUTDEV.ToString(),  (int)PGWLib.Enums.E_PWINFO.PWINFO_AUTDEV, "NTK Solutions Ltda"));
-			listaParametros.Add(new PGWLib.CustomObjects.PW_Parameter(PGWLib.Enums.E_PWINFO.PWINFO_AUTCAP.ToString(),  (int)PGWLib.Enums.E_PWINFO.PWINFO_AUTCAP, "28"));  
+			addParameter(PGWLib.Enums.E_PWINFO.PWINFO_AUTNAME.ToString(), (int)PGWLib.Enums.E_PWINFO.PWINFO_AUTNAME, "PDVS");
+			addParameter(PGWLib.Enums.E_PWINFO.PWINFO_AUTVER.ToString(),  (int)PGWLib.Enums.E_PWINFO.PWINFO_AUTVER, "1.0");
+			addParameter(PGWLib.Enums.E_PWINFO.PWINFO_AUTDEV.ToString(),  (int)PGWLib.Enums.E_PWINFO.PWINFO_AUTDEV, "NTK Solutions Ltda");
+			addParameter(PGWLib.Enums.E_PWINFO.PWINFO_AUTCAP.ToString(),  (int)PGWLib.Enums.E_PWINFO.PWINFO_AUTCAP, "28");  
 
 
 		}
+
+
+		// metodo para adicao de parametros
+		private void addParameter(string sParName, int iParId,string sParVal)
+		{
+			PGWLib.CustomObjects.PW_Parameter par = new PGWLib.CustomObjects.PW_Parameter (sParName, (ushort)iParId, sParVal);
+			listaParametros.Add(par);
+			ParametersListStore.AppendValues(par.ToString());	
+
+		}
+
 		protected void OnDeleteEvent (object sender, DeleteEventArgs a)
 		{
 			Application.Quit ();
@@ -137,8 +181,8 @@ namespace PDVS
 
 			}
 
-			WriteLog ("----------------");
-			WriteLog ("executeTransaction :" + operation.ToString());
+			WriteLog ("\n----------------");
+			WriteLog ("executeTransaction : " + operation.ToString() + "\n");
 
 
 	        /////////////////////////////////
@@ -149,40 +193,59 @@ namespace PDVS
 			
 			if (ret != 0)
 			{
-				string sError = ((PGWLib.Enums.E_PWRET)ret).ToString();
-
+				string sError          = ((PGWLib.Enums.E_PWRET)ret).ToString();
+				string sResultMessage  = eft.getResultMessage();
 
 				// verifica se deu erro de transacao anterior pendente
 				if (ret == (int)PGWLib.Enums.E_PWRET.PWRET_FROMHOSTPENDTRN)
 				{
 					// confirma a transacao que estava pendente
 					WriteLog ("----------------");
-					WriteLog ("Erro " + sError + " ao executar a transação: " + operation.ToString());
+					WriteLog ("Erro :" + sError + ": result message :" + sResultMessage + " ao executar a transação: " + operation.ToString());
 
 					PGWLib.Enums.E_PWCNF transactionStatus = PGWLib.Enums.E_PWCNF.PWCNF_REV_AUTO_ABORT;
 					ret = eft.confirmPendTransaction(transactionStatus, getTransactionResult());
 
 					WriteLog ("----------------");
-					WriteLog ("Confirma transacao pendente: " + operation.ToString());
+
+					string sTranpend = "Erro :" + sError + "-> Confirmando transacao pendente" ;
+
+					WriteLog (sTranpend);
+
+					ShowMessageBoxInfo(this, sTranpend);
+
+
+					LogaTransactionResult();
+					return ret;
 				}
 				else
 				{
 					WriteLog ("----------------");
-					WriteLog ("Erro " + sError + " ao executar a transação: " + operation.ToString());
-					LogaTransactionResult();
+					string sErrorMessage = "Erro :" + sError + " : result message : " + sResultMessage + " ao executar a transação: " + operation.ToString ();
 
+					WriteLog(sErrorMessage);
+
+					ShowMessageBoxError(this, sErrorMessage);
+					LogaTransactionResult();
+					return ret;
 				}
 			}
 
 			WriteLog ("----------------");
-			WriteLog ("Transacao OK");
+			string sOKMessage = "Transacao : " + operation.ToString() + " OK"; 
+			WriteLog (sOKMessage + "\n");
+
+			ShowMessageBoxOK(this, sOKMessage);
+			//ShowMessageBoxInfo(this,   "INFO  SE VIS PACEM PARA BELLUM");
+			//ShowMessageBoxError(this,  "Error SE VIS PACEM PARA BELLUM");
 			LogaTransactionResult();
 
 			return ret;
 
 		
 		}
-			    
+
+		// confirma transacaoes
 		private int confirmUndoTransaction(List<PGWLib.CustomObjects.PW_Parameter> transactionResult,int RetTransaction)
 		{
 			int ret = 0;
@@ -218,7 +281,7 @@ namespace PDVS
 
 			WriteLog ("----------------");
 			WriteLog ("Transacao OK");
-			LogaTransactionResult();
+			//LogaTransactionResult();
 			return ret;
 
 		}
@@ -363,11 +426,105 @@ namespace PDVS
 		}
 
 
+		// metodo para limpar LOG
 		protected void OnButtonLimpaLogClicked (object sender, EventArgs e)
 		{
 			DllLogListStore.Clear();
 		}
+
+		protected void OnTrvParSelectCursorRow (object o, SelectCursorRowArgs args)
+		{
+		//	throw new NotImplementedException ();
+		}
+
+
+		// metodo que adiciona parametros na listbox e na lista de paraetros
+		protected void OnBtnAdicionarClicked (object sender, EventArgs e)
+		{
+
+			AddParDialog cw = new AddParDialog();
+
+
+			cw.Run();
+
+			string sParName = "";
+			int    iParId   = 0 ;
+			string sParVal  = "";
+
+			sParName = cw.sParName;
+			iParId   = cw.iParId;
+			sParVal  = cw.sParVal;
+
+			addParameter(sParName, iParId, sParVal);
+
+
+			cw.Destroy();
+
+		}
+
+		// remove parametros do listbox e da lista de parametros a serem enviados
+		protected void OnBtnRemoverClicked (object sender, EventArgs e)
+		{
+			TreeSelection my_selected_row = trvPar.Selection;
+			TreeModel my_model;
+			TreeIter my_iterator;
+			string selected = "";
+			//int pos = -1;
+			if(my_selected_row.GetSelected(out my_model, out my_iterator))
+			{
+
+				selected = ParametersListStore.GetValue(my_iterator, 0).ToString ();
+				TreePath [] pos = trvPar.Selection.GetSelectedRows();
+				int index = pos[0].Indices[0];
+				ParametersListStore.Remove(ref my_iterator);
+
+				PGWLib.CustomObjects.PW_Parameter obj;
+				obj = listaParametros[index];
+				listaParametros.Remove(obj);
+			}
+		}
+
+		// messagebox para informar erro
+		void ShowMessageBoxError(Window parent,string message)
+		{
+
+			Gtk.MessageDialog md = new Gtk.MessageDialog (null, Gtk.DialogFlags.Modal, 
+				                       Gtk.MessageType.Error, Gtk.ButtonsType.Close,
+				                       message);
+			
+			md.Run ();
+			md.Destroy ();
+			md.Dispose ();
+		}
+
+		// messagebox para fornecer informacao
+		void ShowMessageBoxInfo(Window parent,string message)
+		{
+
+			Gtk.MessageDialog md = new Gtk.MessageDialog (null, Gtk.DialogFlags.Modal, 
+									   Gtk.MessageType.Warning, Gtk.ButtonsType.Close,
+				                       message);
+
+			md.Run ();
+			md.Destroy ();
+			md.Dispose ();
+		}
+
+		// messagebox para noticiar tansacao OK
+		void ShowMessageBoxOK(Window parent,string message)
+		{
+
+			Gtk.MessageDialog md = new Gtk.MessageDialog (null, Gtk.DialogFlags.Modal, 
+				                       Gtk.MessageType.Info, Gtk.ButtonsType.Ok,
+				                       message);
+
+			md.Run ();
+			md.Destroy ();
+			md.Dispose ();
+		}
+	
 	}
+
 
 }
 

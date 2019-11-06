@@ -8,7 +8,7 @@
     <widget-library name="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <widget-library name="../bin/Debug/PDVS.exe" internal="true" />
   </import>
-  <widget class="Gtk.Window" id="PDVS.MainWindow" design-size="1139 619">
+  <widget class="Gtk.Window" id="PDVS.MainWindow" design-size="1139 694">
     <property name="MemberName" />
     <property name="Title" translatable="yes">MainWindow</property>
     <property name="WindowPosition">CenterOnParent</property>
@@ -198,27 +198,6 @@
           <placeholder />
         </child>
         <child>
-          <widget class="Gtk.ScrolledWindow" id="GtkScrolledWindow">
-            <property name="MemberName" />
-            <property name="ShadowType">In</property>
-            <child>
-              <widget class="Gtk.NodeView" id="nodviwParameters">
-                <property name="MemberName" />
-                <property name="WidthRequest">350</property>
-                <property name="HeightRequest">350</property>
-                <property name="CanFocus">True</property>
-                <property name="ShowScrollbars">True</property>
-                <property name="EnableSearch">False</property>
-                <property name="HeadersVisible">False</property>
-              </widget>
-            </child>
-          </widget>
-          <packing>
-            <property name="X">22</property>
-            <property name="Y">167</property>
-          </packing>
-        </child>
-        <child>
           <widget class="Gtk.Button" id="button7">
             <property name="MemberName" />
             <property name="CanFocus">True</property>
@@ -232,12 +211,13 @@
           </packing>
         </child>
         <child>
-          <widget class="Gtk.Button" id="button6">
+          <widget class="Gtk.Button" id="btnAdicionar">
             <property name="MemberName" />
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
             <property name="Label" translatable="yes">Adicionar</property>
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnBtnAdicionarClicked" />
           </widget>
           <packing>
             <property name="X">191</property>
@@ -255,12 +235,13 @@
           </packing>
         </child>
         <child>
-          <widget class="Gtk.Button" id="button5">
+          <widget class="Gtk.Button" id="btnRemover">
             <property name="MemberName" />
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
             <property name="Label" translatable="yes">Remover</property>
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnBtnRemoverClicked" />
           </widget>
           <packing>
             <property name="X">112</property>
@@ -331,59 +312,77 @@
             <property name="Y">80</property>
           </packing>
         </child>
-      </widget>
-    </child>
-  </widget>
-  <widget class="Gtk.Window" id="PDVS.ConfirmationWindow" design-size="385 150">
-    <property name="MemberName" />
-    <property name="Title" translatable="yes">ConfirmationWindow</property>
-    <property name="WindowPosition">Center</property>
-    <property name="Modal">True</property>
-    <property name="BorderWidth">1</property>
-    <property name="Resizable">False</property>
-    <property name="AllowGrow">False</property>
-    <property name="DefaultWidth">400</property>
-    <property name="DefaultHeight">400</property>
-    <child>
-      <widget class="Gtk.Fixed" id="fixed1">
-        <property name="MemberName" />
-        <property name="HasWindow">False</property>
         <child>
-          <widget class="Gtk.ComboBox" id="cbmTranstatus">
-            <property name="MemberName" />
-            <property name="WidthRequest">200</property>
-            <property name="IsTextCombo">True</property>
-            <property name="Items" translatable="yes" />
-            <signal name="SelectionReceived" handler="OnCbmTransactionStatusesSelectionReceived" />
-            <signal name="SelectionGet" handler="OnCbmTranstatusSelectionGet" />
-          </widget>
-          <packing>
-            <property name="X">35</property>
-            <property name="Y">44</property>
-          </packing>
+          <placeholder />
         </child>
         <child>
-          <widget class="Gtk.Label" id="label1">
-            <property name="MemberName" />
-            <property name="LabelProp" translatable="yes">Selecione o status da transação :</property>
-          </widget>
-          <packing>
-            <property name="X">36</property>
-            <property name="Y">15</property>
-          </packing>
+          <placeholder />
         </child>
         <child>
-          <widget class="Gtk.Button" id="btnApply">
+          <placeholder />
+        </child>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <placeholder />
+        </child>
+        <child>
+          <widget class="Gtk.ScrolledWindow" id="GtkScrolledWindow">
             <property name="MemberName" />
-            <property name="CanFocus">True</property>
-            <property name="Type">TextOnly</property>
-            <property name="Label" translatable="yes">Aplicar</property>
-            <property name="UseUnderline">True</property>
-            <signal name="Clicked" handler="OnBtnApplyClicked" />
+            <property name="ShadowType">In</property>
+            <child>
+              <widget class="Gtk.TreeView" id="trvPar">
+                <property name="MemberName" />
+                <property name="WidthRequest">350</property>
+                <property name="HeightRequest">350</property>
+                <property name="CanFocus">True</property>
+                <property name="ShowScrollbars">True</property>
+                <property name="EnableSearch">False</property>
+                <property name="HeadersVisible">False</property>
+                <signal name="SelectCursorRow" handler="OnTrvParSelectCursorRow" />
+              </widget>
+            </child>
           </widget>
           <packing>
-            <property name="X">263</property>
-            <property name="Y">45</property>
+            <property name="X">28</property>
+            <property name="Y">166</property>
           </packing>
         </child>
       </widget>
@@ -472,6 +471,120 @@
             <property name="UseUnderline">True</property>
             <property name="ResponseId">-5</property>
             <signal name="Clicked" handler="OnBtnAplicarClicked" />
+          </widget>
+          <packing>
+            <property name="Position">1</property>
+            <property name="Expand">False</property>
+            <property name="Fill">False</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+  <widget class="Gtk.Dialog" id="PDVS.AddParDialog" design-size="510 128">
+    <property name="MemberName" />
+    <property name="Title" translatable="yes">Adiciona Parametro</property>
+    <property name="WindowPosition">CenterOnParent</property>
+    <property name="Buttons">2</property>
+    <property name="HelpButton">False</property>
+    <child internal-child="VBox">
+      <widget class="Gtk.VBox" id="dialog1_VBox">
+        <property name="MemberName" />
+        <property name="BorderWidth">2</property>
+        <child>
+          <widget class="Gtk.VBox" id="vbox4">
+            <property name="MemberName" />
+            <property name="Spacing">6</property>
+            <child>
+              <widget class="Gtk.Label" id="label2">
+                <property name="MemberName" />
+                <property name="LabelProp" translatable="yes">Parametro                                                                  Valor</property>
+              </widget>
+              <packing>
+                <property name="Position">0</property>
+                <property name="AutoSize">True</property>
+                <property name="Expand">False</property>
+                <property name="Fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="Gtk.HBox" id="hbox2">
+                <property name="MemberName" />
+                <property name="Spacing">6</property>
+                <child>
+                  <widget class="Gtk.ComboBox" id="cmbParametros">
+                    <property name="MemberName" />
+                    <property name="WidthRequest">300</property>
+                    <property name="IsTextCombo">True</property>
+                    <property name="Items" translatable="yes" />
+                  </widget>
+                  <packing>
+                    <property name="Position">0</property>
+                    <property name="AutoSize">True</property>
+                    <property name="Expand">False</property>
+                    <property name="Fill">False</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="Gtk.Entry" id="entryValor">
+                    <property name="MemberName" />
+                    <property name="CanFocus">True</property>
+                    <property name="IsEditable">True</property>
+                    <property name="InvisibleChar">•</property>
+                  </widget>
+                  <packing>
+                    <property name="Position">1</property>
+                    <property name="AutoSize">True</property>
+                  </packing>
+                </child>
+              </widget>
+              <packing>
+                <property name="Position">1</property>
+                <property name="AutoSize">True</property>
+                <property name="Expand">False</property>
+                <property name="Fill">False</property>
+              </packing>
+            </child>
+          </widget>
+          <packing>
+            <property name="Position">0</property>
+            <property name="AutoSize">True</property>
+            <property name="Expand">False</property>
+            <property name="Fill">False</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+    <child internal-child="ActionArea">
+      <widget class="Gtk.HButtonBox" id="dialog1_ActionArea">
+        <property name="MemberName" />
+        <property name="Spacing">10</property>
+        <property name="BorderWidth">5</property>
+        <property name="Size">2</property>
+        <property name="LayoutStyle">End</property>
+        <child>
+          <widget class="Gtk.Button" id="btnCancela">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Type">TextOnly</property>
+            <property name="Label" translatable="yes">Cancela</property>
+            <property name="UseUnderline">True</property>
+            <property name="ResponseId">0</property>
+          </widget>
+          <packing>
+            <property name="Expand">False</property>
+            <property name="Fill">False</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="btnAdiciona">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Type">TextOnly</property>
+            <property name="Label" translatable="yes">Adiciona</property>
+            <property name="UseUnderline">True</property>
+            <property name="ResponseId">0</property>
+            <signal name="Clicked" handler="OnBtnAdicionaClicked" />
           </widget>
           <packing>
             <property name="Position">1</property>

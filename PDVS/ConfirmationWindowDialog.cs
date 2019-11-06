@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
-using static PDVS.ConfirmationWindow;
 using static PGWLib.CustomObjects;
 using static PGWLib.Enums;
 

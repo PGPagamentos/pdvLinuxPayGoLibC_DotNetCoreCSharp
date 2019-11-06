@@ -76,6 +76,18 @@ namespace PGWLib
             return ret;
         }
 
+		// retorna o parametro PWINFO_RESULTMSG
+		public string getResultMessage()
+		{
+			
+			StringBuilder value = new StringBuilder(10000);
+			int getInfoRet = Interop.PW_iGetResult((short)E_PWINFO.PWINFO_RESULTMSG, value, 10001);
+			string ret =  value.ToString();               
+
+
+			return ret;
+		}
+
         public int confirmUndoTransaction(E_PWCNF transactionStatus, List<PW_Parameter> transactionResponse)
         {
             int ret = 99;

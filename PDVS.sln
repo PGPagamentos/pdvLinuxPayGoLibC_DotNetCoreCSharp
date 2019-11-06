@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDVS", "PDVS\PDVS.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PGWLib", "PGWLib\PGWLib.csproj", "{6F5EAD91-2CD7-45AB-B1FF-0700F71E75A2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2666E098-B6B2-4220-86D8-16A40057A73A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -19,5 +21,7 @@ Global
 		{6F5EAD91-2CD7-45AB-B1FF-0700F71E75A2}.Debug|x86.Build.0 = Debug|Any CPU
 		{6F5EAD91-2CD7-45AB-B1FF-0700F71E75A2}.Release|x86.ActiveCfg = Release|Any CPU
 		{6F5EAD91-2CD7-45AB-B1FF-0700F71E75A2}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
 EndGlobal
