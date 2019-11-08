@@ -72,6 +72,8 @@
     <Compile Include="gtk-gui\PDVS.ConfirmationWindowDialog.cs" />
     <Compile Include="AddParDialog.cs" />
     <Compile Include="gtk-gui\PDVS.AddParDialog.cs" />
+    <Compile Include="CaptureUserDataDialog.cs" />
+    <Compile Include="gtk-gui\PDVS.CaptureUserDataDialog.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

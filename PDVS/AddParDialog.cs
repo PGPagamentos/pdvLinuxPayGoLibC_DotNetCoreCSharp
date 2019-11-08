@@ -10,6 +10,7 @@ using static PGWLib.Enums;
 
 namespace PDVS
 {
+	// janela de adicao de parametros
 	public partial class AddParDialog : Gtk.Dialog
 	{
 		public string sParName; 
@@ -32,6 +33,7 @@ namespace PDVS
 		}
 
 
+		// executa a adicao do parametro selecionado no combo box
 		protected void OnBtnAdicionaClicked (object sender, EventArgs e)
 		{
 			//throw new NotImplementedException ();
@@ -49,7 +51,9 @@ namespace PDVS
 
 				if(cmbParametros.ActiveText == item.ToString())
 				{
-					
+					///////
+					// verificar se o parametro existe
+
 					sParName = item.ToString(); 
 					iParId   = (int)item;
 					sParVal  = entryValor.Text.ToString();

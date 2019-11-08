@@ -96,16 +96,6 @@
           </packing>
         </child>
         <child>
-          <widget class="Gtk.Label" id="label5">
-            <property name="MemberName" />
-            <property name="LabelProp" translatable="yes">Log da Aplicação</property>
-          </widget>
-          <packing>
-            <property name="X">681</property>
-            <property name="Y">19</property>
-          </packing>
-        </child>
-        <child>
           <placeholder />
         </child>
         <child>
@@ -155,7 +145,7 @@
               <widget class="Gtk.TreeView" id="treeviewDllLog">
                 <property name="MemberName" />
                 <property name="WidthRequest">400</property>
-                <property name="HeightRequest">500</property>
+                <property name="HeightRequest">450</property>
                 <property name="CanFocus">True</property>
                 <property name="ShowScrollbars">True</property>
                 <property name="EnableSearch">False</property>
@@ -169,20 +159,6 @@
           </packing>
         </child>
         <child>
-          <widget class="Gtk.Button" id="buttonLimpaLog">
-            <property name="MemberName" />
-            <property name="CanFocus">True</property>
-            <property name="Type">TextOnly</property>
-            <property name="Label" translatable="yes">Limpa Log</property>
-            <property name="UseUnderline">True</property>
-            <signal name="Clicked" handler="OnButtonLimpaLogClicked" />
-          </widget>
-          <packing>
-            <property name="X">443</property>
-            <property name="Y">547</property>
-          </packing>
-        </child>
-        <child>
           <placeholder />
         </child>
         <child>
@@ -196,19 +172,6 @@
         </child>
         <child>
           <placeholder />
-        </child>
-        <child>
-          <widget class="Gtk.Button" id="button7">
-            <property name="MemberName" />
-            <property name="CanFocus">True</property>
-            <property name="Type">TextOnly</property>
-            <property name="Label" translatable="yes">Limpa</property>
-            <property name="UseUnderline">True</property>
-          </widget>
-          <packing>
-            <property name="X">24</property>
-            <property name="Y">545</property>
-          </packing>
         </child>
         <child>
           <widget class="Gtk.Button" id="btnAdicionar">
@@ -300,12 +263,13 @@
           </packing>
         </child>
         <child>
-          <widget class="Gtk.Button" id="button8">
+          <widget class="Gtk.Button" id="btnCaptura">
             <property name="MemberName" />
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
-            <property name="Label" translatable="yes">Captura</property>
+            <property name="Label" translatable="yes">Captura Pinpad</property>
             <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnBtnCapturaClicked" />
           </widget>
           <packing>
             <property name="X">24</property>
@@ -383,6 +347,44 @@
           <packing>
             <property name="X">28</property>
             <property name="Y">166</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Label" id="label5">
+            <property name="MemberName" />
+            <property name="LabelProp" translatable="yes">Log da Aplicação</property>
+          </widget>
+          <packing>
+            <property name="X">666</property>
+            <property name="Y">41</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="buttonLimpaLog">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Type">TextOnly</property>
+            <property name="Label" translatable="yes">Limpa Log</property>
+            <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnButtonLimpaLogClicked" />
+          </widget>
+          <packing>
+            <property name="X">531</property>
+            <property name="Y">540</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Button" id="btnLimpaParametros">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Type">TextOnly</property>
+            <property name="Label" translatable="yes">Limpa Parametros</property>
+            <property name="UseUnderline">True</property>
+            <signal name="Clicked" handler="OnBtnLimpaParametrosClicked" />
+          </widget>
+          <packing>
+            <property name="X">27</property>
+            <property name="Y">536</property>
           </packing>
         </child>
       </widget>
@@ -588,6 +590,119 @@
           </widget>
           <packing>
             <property name="Position">1</property>
+            <property name="Expand">False</property>
+            <property name="Fill">False</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+  <widget class="Gtk.Dialog" id="PDVS.CaptureUserDataDialog" design-size="556 126">
+    <property name="MemberName" />
+    <property name="Title" translatable="yes">Captura dados Pinpad</property>
+    <property name="WindowPosition">CenterOnParent</property>
+    <property name="Buttons">1</property>
+    <property name="HelpButton">False</property>
+    <child internal-child="VBox">
+      <widget class="Gtk.VBox" id="dialog1_VBox">
+        <property name="MemberName" />
+        <property name="BorderWidth">2</property>
+        <child>
+          <widget class="Gtk.VBox" id="vbox2">
+            <property name="MemberName" />
+            <property name="Spacing">6</property>
+            <child>
+              <widget class="Gtk.Label" id="label1">
+                <property name="MemberName" />
+                <property name="LabelProp" translatable="yes">Capturar no Pinpad                                                   Min.                         Max.</property>
+              </widget>
+              <packing>
+                <property name="Position">0</property>
+                <property name="AutoSize">True</property>
+                <property name="Expand">False</property>
+                <property name="Fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="Gtk.HBox" id="hbox1">
+                <property name="MemberName" />
+                <property name="Spacing">6</property>
+                <child>
+                  <widget class="Gtk.ComboBox" id="cmbCaptura">
+                    <property name="MemberName" />
+                    <property name="WidthRequest">300</property>
+                    <property name="IsTextCombo">True</property>
+                    <property name="Items" translatable="yes" />
+                  </widget>
+                  <packing>
+                    <property name="Position">0</property>
+                    <property name="AutoSize">True</property>
+                    <property name="Expand">False</property>
+                    <property name="Fill">False</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="Gtk.Entry" id="entryMin">
+                    <property name="MemberName" />
+                    <property name="WidthRequest">80</property>
+                    <property name="CanFocus">True</property>
+                    <property name="IsEditable">True</property>
+                    <property name="InvisibleChar">•</property>
+                  </widget>
+                  <packing>
+                    <property name="Position">1</property>
+                    <property name="AutoSize">True</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="Gtk.Entry" id="entryMax">
+                    <property name="MemberName" />
+                    <property name="WidthRequest">80</property>
+                    <property name="CanFocus">True</property>
+                    <property name="IsEditable">True</property>
+                    <property name="InvisibleChar">•</property>
+                  </widget>
+                  <packing>
+                    <property name="Position">2</property>
+                    <property name="AutoSize">True</property>
+                  </packing>
+                </child>
+              </widget>
+              <packing>
+                <property name="Position">1</property>
+                <property name="AutoSize">True</property>
+                <property name="Expand">False</property>
+                <property name="Fill">False</property>
+              </packing>
+            </child>
+          </widget>
+          <packing>
+            <property name="Position">0</property>
+            <property name="AutoSize">True</property>
+            <property name="Expand">False</property>
+            <property name="Fill">False</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+    <child internal-child="ActionArea">
+      <widget class="Gtk.HButtonBox" id="dialog1_ActionArea">
+        <property name="MemberName" />
+        <property name="Spacing">10</property>
+        <property name="BorderWidth">5</property>
+        <property name="Size">1</property>
+        <property name="LayoutStyle">End</property>
+        <child>
+          <widget class="Gtk.Button" id="btnCaptura">
+            <property name="MemberName" />
+            <property name="CanFocus">True</property>
+            <property name="Type">TextOnly</property>
+            <property name="Label" translatable="yes">Captura</property>
+            <property name="UseUnderline">True</property>
+            <property name="ResponseId">0</property>
+            <signal name="Clicked" handler="OnBtnCapturaClicked" />
+          </widget>
+          <packing>
             <property name="Expand">False</property>
             <property name="Fill">False</property>
           </packing>

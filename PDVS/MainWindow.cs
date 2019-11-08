@@ -120,6 +120,7 @@ namespace PDVS
 
 		}
 
+		// adiciona os parametros obrigatorios
 		private void addMandatoryParameters()
 		{
 
@@ -147,6 +148,7 @@ namespace PDVS
 			a.RetVal = true;
 		}
 
+		// executa a transacao selecionada no combo box
 		protected void OnButtonExecutarClicked (object sender, EventArgs e)
 		{
 			int ret = executeTransaction();
@@ -438,7 +440,7 @@ namespace PDVS
 		}
 
 
-		// metodo que adiciona parametros na listbox e na lista de paraetros
+		// metodo que adiciona parametros na listbox e na lista de parametros
 		protected void OnBtnAdicionarClicked (object sender, EventArgs e)
 		{
 
@@ -455,10 +457,23 @@ namespace PDVS
 			iParId   = cw.iParId;
 			sParVal  = cw.sParVal;
 
+			cw.Destroy();
+
+			foreach (PGWLib.CustomObjects.PW_Parameter item in listaParametros)
+			{
+				if (item.parameterName == sParName)
+				{
+					ShowMessageBoxError(this,"Você não pode inserir duas vezes o mesmo parâmetro");
+					return;
+				}
+			}
+
+
+
 			addParameter(sParName, iParId, sParVal);
 
 
-			cw.Destroy();
+
 
 		}
 
@@ -523,6 +538,59 @@ namespace PDVS
 			md.Dispose ();
 		}
 	
+		// ativa a captura de dados pelo pinpad
+		protected void OnBtnCapturaClicked (object sender, EventArgs e)
+		{
+			string param = "";
+			int minLength = 0;
+			int maxLength = 0;
+			PGWLib.Enums.E_PWUserDataMessages message;
+
+
+			WriteLog ("----------------");
+			WriteLog ("Captura Dados do Pinpad \n");
+
+
+			CaptureUserDataDialog selectUserDataWindow = new CaptureUserDataDialog();
+
+			selectUserDataWindow.Run();
+
+			minLength = selectUserDataWindow.Min;
+			maxLength = selectUserDataWindow.Max;
+		    message   = selectUserDataWindow.Captura;
+
+			selectUserDataWindow.Destroy();
+
+
+			if (minLength > 0)
+			{
+
+				PGWLib.PGWLib eft = new PGWLib.PGWLib();
+				string userTypedValue = "";
+
+				int ret = eft.getInputFromPP(ref userTypedValue, message, minLength, maxLength);
+				if (ret != 0)
+				{
+					ShowMessageBoxInfo(this,string.Format("Erro ao executar a captura de dado no PINPad: {0}{1}{2} result  message :{3}", ret, Environment.NewLine, 
+						((PGWLib.Enums.E_PWRET)ret).ToString(), eft.getResultMessage()));
+					LogaTransactionResult();
+					return;
+				}
+
+				ShowMessageBoxInfo(this,string.Format("Dado capturado no PINPad: {0}{1}{2}",message.ToString(), 
+					                              Environment.NewLine, userTypedValue));
+				
+				LogaTransactionResult();
+			}
+		}
+
+		// Faz a limpeza dos parametros mantendo os parametros obrigatorios
+		protected void OnBtnLimpaParametrosClicked (object sender, EventArgs e)
+		{
+			ParametersListStore.Clear();
+			listaParametros.Clear();
+			addMandatoryParameters();
+		}
 	}
 
 

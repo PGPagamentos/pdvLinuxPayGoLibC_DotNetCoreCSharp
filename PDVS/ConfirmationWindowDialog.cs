@@ -10,6 +10,7 @@ using static PGWLib.Enums;
 
 namespace PDVS
 {
+	// janela de confirmacao de transacao
 	public partial class ConfirmationWindowDialog : Gtk.Dialog
 	{
 		public PGWLib.Enums.E_PWCNF TransactionStatus;
@@ -25,6 +26,7 @@ namespace PDVS
 			}
 		}
 
+		// ativa a confirmacao da transacao
 		protected void OnBtnAplicarClicked (object sender, EventArgs e)
 		{
 			//throw new NotImplementedException ();
