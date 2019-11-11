@@ -115,7 +115,7 @@ namespace PGWLib
         // Método utilizado para formatar o valor durante a digitação
         private void txtValue_KeyUp(object sender, KeyEventArgs e)
         {
-            valorDinheiro = txtValue.Text.Replace("R$", "").Replace(",", "").Replace(" ", "").Replace("00,", "");
+           valorDinheiro = txtValue.Text.Replace("R$", "").Replace(",", "").Replace(" ", "").Replace("00,", "");
             if (valorDinheiro.Length == 0)
             {
                 txtValue.Text = "0,00" + valorDinheiro;

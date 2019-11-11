@@ -396,15 +396,21 @@ namespace PGWLib
             return ret;
         }
 
-        private int getTypedDataFromUser(PW_GetData expectedData)
+        private int getTypedDataFromUser(CustomObjects.PW_GetData expectedData)
         {
             bool userAborted = false;
             string value = string.Empty;
 
             ///////////////////////////////////////////////////////
             // verificacar se é mascara de dinheiro
-            if (expectedData.szMascaraDeCaptura == "R$@.@@@.@@@,@@")
+			if ((expectedData.szMascaraDeCaptura == "R$@.@@@.@@@,@@") ||  // BIN 
+				(expectedData.szMascaraDeCaptura == "@.@@@.@@@.@@@,@@" )  // REDE
+			  )
             {
+				// corrige formatacao
+				if (expectedData.bTamanhoMaximo > 9)
+					expectedData.bTamanhoMaximo = 9;
+				
                 FormCurrencyData window = new FormCurrencyData(expectedData);
                 window.ShowDialog(ref userAborted, ref value);
             }
