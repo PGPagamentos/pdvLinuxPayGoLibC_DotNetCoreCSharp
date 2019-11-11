@@ -2,7 +2,10 @@
 Instruções atualizadas para executar o aplicativo no Ubuntu:
 
 1) O link abaixo tem as instruções para instalar o mono-develop (compilador )
-https://www.mono-project.com/download/stable/
+   https://www.mono-project.com/download/stable/#download-lin
+       No Item :
+          Ubuntu 16.04 (i386, amd64, armhf, arm64, ppc64el)
+
 
 - Para instalar a IDE :
 sudo apt-get install monodevelop
