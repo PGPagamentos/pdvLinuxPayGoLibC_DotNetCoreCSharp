@@ -93,7 +93,8 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.LblHeader);
             this.Controls.Add(this.btnOK);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            //this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

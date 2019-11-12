@@ -18,11 +18,11 @@ namespace PGWLib
     public partial class FormCurrencyData : Form
     {
         bool userAborted = false;
-        PW_GetData _expectedData;
+		CustomObjects.PW_GetData _expectedData;
         private static Timer _timer = new Timer();
         string valorDinheiro;
 
-        public FormCurrencyData(PW_GetData expectedData)
+        public FormCurrencyData(CustomObjects.PW_GetData expectedData)
         {
             InitializeComponent();
 
@@ -40,7 +40,7 @@ namespace PGWLib
                 expectedData.bOcultarDadosDigitados == 1) txtValue.PasswordChar = '*';
 
             //Define o tamanho máximo do dado a ser capturado
-            if (expectedData.ulValorMaximo > 0) txtValue.MaxLength = expectedData.ulValorMaximo;
+            if (expectedData.ulValorMaximo > 1) txtValue.MaxLength = expectedData.ulValorMaximo;
 
             //Define se o dado deve ser mascarado
             //if (expectedData.szMascaraDeCaptura != "") txtValue.Mask = expectedData.szMascaraDeCaptura.Replace("@","C");
@@ -115,8 +115,19 @@ namespace PGWLib
         // Método utilizado para formatar o valor durante a digitação
         private void txtValue_KeyUp(object sender, KeyEventArgs e)
         {
-           valorDinheiro = txtValue.Text.Replace("R$", "").Replace(",", "").Replace(" ", "").Replace("00,", "");
-            if (valorDinheiro.Length == 0)
+              
+			if (txtValue.Text.StartsWith ("R$")) 
+			{
+				valorDinheiro = txtValue.Text.Replace ("R$", "").Replace (",", "").Replace (" ", "").Replace ("00,", "");
+			}
+			else 
+			{
+				valorDinheiro = txtValue.Text.Replace(",", "").Replace(" ", "").Replace("00,", "");
+			}
+
+
+
+			if (valorDinheiro.Length == 0)
             {
                 txtValue.Text = "0,00" + valorDinheiro;
             }
@@ -140,18 +151,28 @@ namespace PGWLib
                 }
                 else
                 {
-                    txtValue.Text = valorDinheiro.Insert(valorDinheiro.Length - 2, ",");
+                   txtValue.Text = valorDinheiro.Insert(valorDinheiro.Length - 2, ",");
                 }
             }
+
+
             valorDinheiro = txtValue.Text;
-            txtValue.Text = string.Format("{0:C}", Convert.ToDouble(valorDinheiro));
+
+            // coloca o simbolo relativo a moeda sendo utilizada
+			//txtValue.Text = string.Format("{0:C}", Convert.ToDouble(valorDinheiro));
             txtValue.Select(txtValue.Text.Length, 0);
+  
         }
 
         private void txtValue_Leave(object sender, EventArgs e)
         {
-            valorDinheiro = txtValue.Text.Replace("R$", "");
-            txtValue.Text = string.Format("{0:C}", Convert.ToDouble(valorDinheiro));
+			if (txtValue.Text.StartsWith ("R$")) 
+			{
+				valorDinheiro = txtValue.Text.Replace ("R$", "");
+			}
+
+			// coloca o simbolo relativo a moeda sendo utilizada
+			//txtValue.Text = string.Format("{0:C}", Convert.ToDouble(valorDinheiro));
         }
     }
 }
