@@ -84,7 +84,7 @@ fazer Download do lib, e copiar a lib **PGWebLib.so**  para /usr/lib
 verificar se o certificado **certificado.crt** está no diretoŕio de execução da aplicação
 
     - root@user:/home/user/Downloads/pdvLinuxPayGoLibC_DotNetCoreCSharp-master# ls -l PDVS/bin/Debug/certificado.crt 
-    - -rw-rw-r-- 1 eduardo_zago eduardo_zago 1537 nov 13 15:01 PDVS/bin/Debug/certificado.crt
+    - -rw-rw-r-- 1 user user 1537 nov 13 15:01 PDVS/bin/Debug/certificado.crt
 
 antes de instalar, **deletar o diretório PGWebLib** que fica no diretorio de execução da aplicação. Se estiveres debugando, o diretório está no path "PDVS/bin/Debug/".
 
