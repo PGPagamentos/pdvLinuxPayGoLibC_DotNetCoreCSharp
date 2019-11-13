@@ -69,8 +69,10 @@ verificar se o certificado **certificado.crt** está no diretoŕio de execução
     - root@user:/home/user/Downloads/pdvLinuxPayGoLibC_DotNetCoreCSharp-master# ls -l PDVS/bin/Debug/certificado.crt 
     - -rw-rw-r-- 1 eduardo_zago eduardo_zago 1537 nov 13 15:01 PDVS/bin/Debug/certificado.crt
 
+antes de instalar, **deletar o diretório PGWebLib** que fica no diretorio de execução da aplicação. Se estiveres debugando, o diretório está no path "PDVS/bin/Debug/".
+
 Para fazer a instalação do **PDC**, clicar no botão instala da aplicação.
 
-OBS :  antes de instalar deletar diretório PGWebLib que fica no diretorio de execucao da aplicacao, se estiver debugando está em PDVS/bin/Debug/.
 
-6) Para Testar a Venda Selecionar PWOPER_SALE no combo box PWINFO_OPERATION e ativar botão Executa
+6) Para Testar a Venda Selecionar PWOPER_SALE no combo box PWINFO_OPERATION e ativar botão Executa.
+
