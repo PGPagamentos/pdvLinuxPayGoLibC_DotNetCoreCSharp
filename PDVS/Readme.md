@@ -69,7 +69,6 @@ para verificar se a atribuição ficou correta, liste novamente (ls -l ttyACM0):
 * root@deliver-lenovo-ideapad-310-14isk-zago:/dev# ls -l ttyACM0 *
 * crwxrwxrwx 1 root dialout 166, 0 nov 13 15:02 ttyACM0 *
 
-
 5) Shared Object:
 
 digitar: 
