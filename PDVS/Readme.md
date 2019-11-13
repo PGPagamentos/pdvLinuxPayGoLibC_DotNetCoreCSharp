@@ -1,7 +1,7 @@
 
 Instruções atualizadas para executar o aplicativo no Ubuntu:
 
-1) O link abaixo tem as instruções para instalar o mono-develop (compilador)
+# 1) O link abaixo tem as instruções para instalar o mono-develop (compilador)
    https://www.mono-project.com/download/stable/#download-lin
        No Item :
           Ubuntu 16.04 (i386, amd64, armhf, arm64, ppc64el)
@@ -25,7 +25,7 @@ Caso tenhas problema com a chave publica, executar o comando para publica-la:
      - apt-key adv --keyserver keyserver.ubuntu.com --recv [codigo da chave]
 
 
-2) Para instalar a IDE, você pode executar diretamente por linha de comando:
+# 2) Para instalar a IDE, você pode executar diretamente por linha de comando:
 
        - sudo apt-get install monodevelop
 
@@ -34,11 +34,11 @@ ou, entrar via site:
     - A versão da ide deve ser a 5.10 que está também no site: 
     https://ubuntu.pkgs.org/16.04/ubuntu-universe-amd64/monodevelop_5.10.0.871-2_all.deb.html
 
-3) Para testar se o compilador foi instalado, executar o comando abaixo como usuário normal:
+# 3) Para testar se o compilador foi instalado, executar o comando abaixo como usuário normal:
 
        - monodevelop
 
-4) Para configurar o ambiente de execução da aplicação, entrar num terminal e digitar: 
+# 4) Para configurar o ambiente de execução da aplicação, entrar num terminal e digitar: 
 
        - sudo su
 e informar senha do root
@@ -69,7 +69,7 @@ para verificar se a atribuição ficou correta, liste novamente (ls -l ttyACM0):
 * root@deliver-lenovo-ideapad-310-14isk-zago:/dev# ls -l ttyACM0 *
 * crwxrwxrwx 1 root dialout 166, 0 nov 13 15:02 ttyACM0 *
 
-5) Shared Object:
+# 5) Shared Object:
 
 digitar: 
 
@@ -91,5 +91,5 @@ antes de instalar, **deletar o diretório PGWebLib** que fica no diretorio de ex
 Para fazer a instalação do **PDC**, clicar no botão instala da aplicação.
 
 
-6) Para Testar a Venda Selecionar PWOPER_SALE no combo box PWINFO_OPERATION e ativar botão Executa.
+# 6) Para Testar a Venda Selecionar PWOPER_SALE no combo box PWINFO_OPERATION e ativar botão Executa.
 
