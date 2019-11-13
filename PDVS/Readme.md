@@ -1,10 +1,28 @@
 
 Instruções atualizadas para executar o aplicativo no Ubuntu:
 
-1) O link abaixo tem as instruções para instalar o mono-develop (compilador )
+1) O link abaixo tem as instruções para instalar o mono-develop (compilador)
    https://www.mono-project.com/download/stable/#download-lin
        No Item :
           Ubuntu 16.04 (i386, amd64, armhf, arm64, ppc64el)
+          
+Ou, execute os comandos abaixo:
+
+. Adicionar o **repositório do Mono** para Ubuntu 16.04 (i386, amd64, armhf, arm64, ppc64el):
+          
+    - sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
+    - sudo apt install apt-transport-https ca-certificates
+    - echo "deb https://download.mono-project.com/repo/ubuntu stable-xenial main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list
+    - sudo apt update 
+
+. **Instar o Mono**:
+    
+    - sudo apt install mono-devel
+    - sudo apt install mono-complete
+
+Caso tenhas problema com a chave publica, executar o comando para publica-la:
+     
+     - apt-key adv --keyserver keyserver.ubuntu.com --recv [codigo da chave]
 
 
 2) Para instalar a IDE, você pode executar diretamente por linha de comando:
