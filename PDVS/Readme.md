@@ -38,7 +38,7 @@ ou, entrar via site:
 
        - monodevelop
 
-# 4) Para configurar o ambiente de execução da aplicação, entrar num terminal e digitar: 
+### 4) Para configurar o ambiente de execução da aplicação, entrar num terminal e digitar: 
 
        - sudo su
 e informar senha do root
