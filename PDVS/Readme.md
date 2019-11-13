@@ -60,11 +60,12 @@ digitar:
    
 e informar senha do root
 
-copiar a so PGWebLib.so  para /usr/lib
+fazer Download do lib, e copiar a lib **PGWebLib.so**  para /usr/lib
 
-copiar certificado certificado.crt para o diretoŕio de execução da aplicação
+copiar certificado **certificado.crt** para o diretoŕio de execução da aplicação
 
-Para fazer a instalação clicar no botão instala da aplicação.
+Para fazer a instalação do **PDC**, clicar no botão instala da aplicação.
+
 OBS :  antes de instalar deletar diretório PGWebLib que fica no diretorio de execucao da aplicacao, se estiver debugando está em PDVS/bin/Debug/.
 
 6) Para Testar a Venda Selecionar PWOPER_SALE no combo box PWINFO_OPERATION e ativar botão Executa
