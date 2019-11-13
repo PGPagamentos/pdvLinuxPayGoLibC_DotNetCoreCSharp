@@ -62,7 +62,12 @@ e informar senha do root
 
 fazer Download do lib, e copiar a lib **PGWebLib.so**  para /usr/lib
 
-copiar certificado **certificado.crt** para o diretoŕio de execução da aplicação
+    - root@user:/home/user/Downloads# cp PGWebLib.so /usr/lib/.
+
+verificar se o certificado **certificado.crt** está no diretoŕio de execução da aplicação
+
+    - root@user:/home/user/Downloads/pdvLinuxPayGoLibC_DotNetCoreCSharp-master# ls -l PDVS/bin/Debug/certificado.crt 
+    - -rw-rw-r-- 1 eduardo_zago eduardo_zago 1537 nov 13 15:01 PDVS/bin/Debug/certificado.crt
 
 Para fazer a instalação do **PDC**, clicar no botão instala da aplicação.
 
