@@ -13,7 +13,8 @@ Instruções atualizadas para executar o aplicativo no Ubuntu:
 
 ou, entrar via site:
 
-    - A versão da ide deve ser a 5.10 que está também no site : https://ubuntu.pkgs.org/16.04/ubuntu-universe-amd64/monodevelop_5.10.0.871-2_all.deb.html
+    - A versão da ide deve ser a 5.10 que está também no site: 
+    https://ubuntu.pkgs.org/16.04/ubuntu-universe-amd64/monodevelop_5.10.0.871-2_all.deb.html
 
 3) Para testar se o compilador foi instalado, executar o comando abaixo como usuário normal:
 
@@ -21,20 +22,49 @@ ou, entrar via site:
 
 4) Para configurar o ambiente de execução da aplicação, entrar num terminal e digitar: 
 
-       - su
+       - sudo su
 e informar senha do root
    
-  Com o PINPAD:
+Com o PINPAD:
   
-     - conectar o Pinpad e Pesquisar em qual USB ele esta conectado
-     - utilizando comando: dmesg serão listadas muitas informações, procurar por GERTEC, ao encontrar criar permissões totais na pasta /dev para a conexão USB. exemplo de um PinPad na USB:
-     - ttyACM0: cd /dev = pasta com todas as portas chmod 777 ttyACM0 = permissões totais ls -l = lista todas as permissõs da pasta /dev
-   Shared Object :
-          - digitar: su e informar senha do root.
-          - copiar a so PGWebLib.so  para /usr/lib
-          - copiar certificado certificado.crt para o diretoŕio de execução da aplicação
-- Para fazer a instalação clicar no botão instala da aplicação.
-- OBS :  antes de instalar deletar diretório PGWebLib que fica no diretorio de execucao da aplicacao
-         se estiver debugando está em PDVS/bin/Debug/ 
+conectar o Pinpad e pesquisar em qual USB ele esta conectado. Digitar o comando:
+ 
+     - dmesg
+ 
+procurar na lista por **GERTEC**, ao encontrar criar permissões totais na pasta /dev para a conexão USB. Exemplo de um PinPad na USB:
+* cdc_acm 1-1:2.0: ttyACM0: USB ACM device *
 
-5) Para Testar a Venda Selecionar PWOPER_SALE no combo box PWINFO_OPERATION e ativar botão Executa
+entrar no diretório /dev
+
+    - cd /dev
+
+para ver se o arquivo/pasta representa o hardware:
+
+    - ls -l ttyACM0
+
+para atribuir permissões totais:
+
+    - chmod 777 ttyACM0
+
+para verificar se a atribuição ficou correta, liste novamente (ls -l ttyACM0):
+
+* root@deliver-lenovo-ideapad-310-14isk-zago:/dev# ls -l ttyACM0 *
+* crwxrwxrwx 1 root dialout 166, 0 nov 13 15:02 ttyACM0 *
+
+
+5) Shared Object:
+
+digitar: 
+
+    - sudo su
+   
+e informar senha do root
+
+copiar a so PGWebLib.so  para /usr/lib
+
+copiar certificado certificado.crt para o diretoŕio de execução da aplicação
+
+Para fazer a instalação clicar no botão instala da aplicação.
+OBS :  antes de instalar deletar diretório PGWebLib que fica no diretorio de execucao da aplicacao, se estiver debugando está em PDVS/bin/Debug/.
+
+6) Para Testar a Venda Selecionar PWOPER_SALE no combo box PWINFO_OPERATION e ativar botão Executa
