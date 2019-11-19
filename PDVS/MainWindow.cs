@@ -577,10 +577,15 @@ namespace PDVS
 					return;
 				}
 
-				ShowMessageBoxInfo(this,string.Format("Dado capturado no PINPad: {0}{1}{2}",message.ToString(), 
-					                              Environment.NewLine, userTypedValue));
+				string sCapturaOK = string.Format ("Dado capturado no PINPad: {0}{1}{2}", message.ToString (), 
+					                    Environment.NewLine, userTypedValue);
+				
+				ShowMessageBoxInfo(this,sCapturaOK);
 				
 				LogaTransactionResult();
+				WriteLog("------------------------------------------------");
+				WriteLog(sCapturaOK);
+
 			}
 		}
 

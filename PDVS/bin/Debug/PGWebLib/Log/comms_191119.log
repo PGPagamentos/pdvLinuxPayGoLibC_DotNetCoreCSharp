@@ -1,0 +1,61 @@
+14:15:16:096 PW_Init(/home/luiz/Projetos/PayGo/pdvLinuxPayGoLibC_DotNetCoreCSharp/PDVS/bin/Debug/PGWebLib)
+14:15:16:097 Ultima limpeza: 13/11/2019 18:12:18)
+14:15:17:406 [PGWebLib] PP_Treatment Selecionado: [1]
+14:15:34:397 ********* Limpeza de logs efetuada
+14:15:34:397 PW_iNewTransac(0, 0004.0000.0064.0000)
+14:15:34:406 CONNECT ====================================================================
+14:15:34:407 Resolvendo o host (app.tpgw.ntk.com.br)
+14:15:34:436 Conectando com o host (app.tpgw.ntk.com.br), IP (200.155.8.203:17502)
+14:15:34:437 CAFile = /home/luiz/Projetos/PayGo/pdvLinuxPayGoLibC_DotNetCoreCSharp/PDVS/bin/Debug/certificado.crt
+14:15:34:541 depth=1 /C=BR/ST=SAO PAULO/L=SAO PAULO/O=SETIS AUTOMACAO E SISTEMAS LTDA/OU=DESENVOLVIMENTO/CN=SETIS CA TEST/emailAddress=contato@setis.com.br
+14:15:34:541 verify return:1
+14:15:34:542 depth=0 /C=BR/ST=SAO PAULO/L=SAO PAULO/O=SETIS AUTOMACAO E SISTEMAS LTDA/OU=DESENVOLVIMENTO/CN=*.tpgw.ntk.com.br/emailAddress=contato@setis.com.br
+14:15:34:542 verify return:1
+14:15:34:597 Certificado auto-assinado
+14:15:34:597 Nome do Subject: /C=BR/ST=SAO PAULO/L=SAO PAULO/O=SETIS AUTOMACAO E SISTEMAS LTDA/OU=DESENVOLVIMENTO/CN=*.tpgw.ntk.com.br/emailAddress=contato@setis.com.br
+14:15:34:597 Nome do emissor: /C=BR/ST=SAO PAULO/L=SAO PAULO/O=SETIS AUTOMACAO E SISTEMAS LTDA/OU=DESENVOLVIMENTO/CN=SETIS CA TEST/emailAddress=contato@setis.com.br
+14:15:34:597 Validacao pelo OpenSSL
+14:15:34:597 OpenSSL OK: *.tpgw.ntk.com.br
+14:15:34:597 TLSv1.2 connect OK <NEW SESSION>!
+14:15:34:679 [PGWebLib] PP_Treatment Selecionado: [1]
+14:15:34:680 PW_iAddParam(21, PDVS)
+14:15:34:871 PW_iAddParam(22, 1.0)
+14:15:34:872 PW_iAddParam(23, NTK Solutions Ltda)
+14:15:34:872 PW_iAddParam(36, 28)
+14:15:35:255 SSLState = 3 (SSL negotiation finished successfully)
+
+14:15:35:255 STATUS: CONNECTED
+14:15:35:266 TX[000410]: 02 24 00 01 8F 00 00 00 00 00 00 01 02 00 07 34 .$.............4
+                         01 02                                           ..               
+14:15:35:435 select = 1
+14:15:35:435 RX[000001]: 02 24 00 00 67 00 00 33 94 DD C3 01 04 00 00 00 .$..g..3........
+                         07 02 01 80 11 05 36 30 37 34 39 12 05 88 52 49 ......60749...RI 
+                         59 0F 32 03 39 62 90 41 04 00 00 00 01 42 15 0D Y.2.9b.A.....B.. 
+                         20 20 20 20 20 20 54 45 53 54 45 20 4F 4B 20 20       TESTE OK   
+                         20 20 20 20 03 14 06 BC DF 13 CE C1 AE 72 3A 28     .........r:( 
+                         6F 8F 61 2F A7 45 4B 9F 1B 62 6A 07 20 19 11 19 o.a/.EK..bj. ... 
+                         15 15 35 6B 07 20 19 11 19 17 15 35 6C 01 00 F4 ..5k. .....5l... 
+                         01 00                                           ..               
+14:15:35:584 DISCONNECT =================================================================
+14:15:35:585 >>LNXSSL_iModemDisconnect
+14:15:35:585 PW_iExecTransac(0004.0000.0064.0000) <-2497>
+14:15:35:591 PW_iPPRemoveCard()
+14:15:38:720 PW_iPPEventLoop OK()
+14:15:38:764 PW_iExecTransac(0004.0000.0064.0000) <0>
+14:15:38:765 0x11=60749
+14:15:38:765 0x1B=app.tpgw.ntk.com.br:17502
+14:15:38:765 0x31=20191119151535
+14:15:38:765 0x32=0000396290
+14:15:38:765 0x42=      TESTE OK      
+14:15:38:765 0x43=0
+14:15:38:765 0x6C=0
+14:15:38:765 0x6F=   PROCESSANDO...
+14:15:38:765 0x74=      OPERACAO      CANCELADA
+14:15:38:765 0x75=    OPERACAO        CANCELADA   
+14:15:38:768 0x7F01=1
+14:15:38:768 0x7F02=24
+14:15:38:768 0x7F04=191119151535
+14:15:38:768 0x7F0B=0
+14:15:41:210 [PGWebLib] PP_Treatment Selecionado: [1]
+14:15:41:296 [PGWebLib] PP_Treatment Selecionado: [1]
+14:16:15:102 [PGWebLib] PP_Treatment Selecionado: [1]

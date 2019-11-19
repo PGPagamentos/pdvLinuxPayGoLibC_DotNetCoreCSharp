@@ -169,7 +169,7 @@ namespace PDVS
 			this.btnCaptura.CanFocus = true;
 			this.btnCaptura.Name = "btnCaptura";
 			this.btnCaptura.UseUnderline = true;
-			this.btnCaptura.Label = global::Mono.Unix.Catalog.GetString ("Captura Pinpad");
+			this.btnCaptura.Label = global::Mono.Unix.Catalog.GetString ("PW-iPPGetUserData");
 			this.fixed1.Add (this.btnCaptura);
 			global::Gtk.Fixed.FixedChild w14 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.btnCaptura]));
 			w14.X = 24;

@@ -81,7 +81,7 @@ namespace PGWLib
 		{
 			
 			StringBuilder value = new StringBuilder(10000);
-			int getInfoRet = Interop.PW_iGetResult((short)E_PWINFO.PWINFO_RESULTMSG, value, 10001);
+			int getInfoRet = Interop.PW_iGetResult((short)Enums.E_PWINFO.PWINFO_RESULTMSG, value, 10001);
 			string ret =  value.ToString();               
 
 
@@ -223,11 +223,11 @@ namespace PGWLib
         {
             bool keepGoing = true;
 
-            int ret = (int)E_PWRET.PWRET_NODATA;
+            int ret = (int)Enums.E_PWRET.PWRET_NODATA;
 
             while (keepGoing)
             {
-                PW_GetData[] structParam = new PW_GetData[10];
+				CustomObjects.PW_GetData[] structParam = new CustomObjects.PW_GetData[10];
                 short paramAmount = 10;
                 ret = (int)Interop.PW_iExecTransac(structParam, ref paramAmount);
                 //Debug.Print(string.Format("CALLED iExecTransac COM RETORNO {0}", ret.ToString()));
@@ -242,15 +242,30 @@ namespace PGWLib
                         return ret;
                 }
                 */
-                if (ret == (int)E_PWRET.PWRET_MOREDATA)
+                if (ret == (int)Enums.E_PWRET.PWRET_MOREDATA)
                 {
                     int ret2 = showCorrespondingWindow(structParam);
-                    if (ret2 != (int)E_PWRET.PWRET_OK) 
+					if (ret2 != (int)Enums.E_PWRET.PWRET_OK) 
                     return ret2;
 
                 }
+				else if(ret == (int)Enums.E_PWRET.PWRET_NOTHING)
+				{
+					continue;
+				}
                 else
                 {
+
+					StringBuilder value = new StringBuilder(10000);
+					int getInfoRet = Interop.PW_iGetResult((short)Enums.E_PWINFO.PWINFO_CNFREQ, value, 10001);
+					string sValue = value.ToString(); 
+
+
+					if (sValue.Trim() == "1") 
+					{
+						confirmPendTransaction(Enums.E_PWCNF.PWCNF_CNF_AUTO, getTransactionResult());
+					}
+
                     return ret;
                     // if (ret == (int)E_PWRET.PWRET_FROMHOSTPENDTRN)
                     // {

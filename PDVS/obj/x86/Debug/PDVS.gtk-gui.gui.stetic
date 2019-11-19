@@ -267,7 +267,7 @@
             <property name="MemberName" />
             <property name="CanFocus">True</property>
             <property name="Type">TextOnly</property>
-            <property name="Label" translatable="yes">Captura Pinpad</property>
+            <property name="Label" translatable="yes">PW-iPPGetUserData</property>
             <property name="UseUnderline">True</property>
             <signal name="Clicked" handler="OnBtnCapturaClicked" />
           </widget>
