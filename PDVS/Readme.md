@@ -1,29 +1,95 @@
 
 Instruções atualizadas para executar o aplicativo no Ubuntu:
 
-1) O link abaixo tem as instruções para instalar o mono-develop (compilador )
+### 1) O link abaixo tem as instruções para instalar o mono-develop (compilador)
    https://www.mono-project.com/download/stable/#download-lin
        No Item :
           Ubuntu 16.04 (i386, amd64, armhf, arm64, ppc64el)
+          
+Ou, execute os comandos abaixo:
+
+. Adicionar o **repositório do Mono** para Ubuntu 16.04 (i386, amd64, armhf, arm64, ppc64el):
+          
+    - sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
+    - sudo apt install apt-transport-https ca-certificates
+    - echo "deb https://download.mono-project.com/repo/ubuntu stable-xenial main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list
+    - sudo apt update 
+
+. **Instar o Mono**:
+    
+    - sudo apt install mono-devel
+    - sudo apt install mono-complete
+
+Caso tenhas problema com a chave publica, executar o comando para publica-la:
+     
+     - apt-key adv --keyserver keyserver.ubuntu.com --recv [codigo da chave]
 
 
-- Para instalar a IDE :
-sudo apt-get install monodevelop
-- A versão da ide deve ser a 5.10 que está também no site : https://ubuntu.pkgs.org/16.04/ubuntu-universe-amd64/monodevelop_5.10.0.871-2_all.deb.html
+### 2) Para instalar a IDE, você pode executar diretamente por linha de comando:
 
-- Para configurar o ambiente de execução
-   Entrar num  terminal.
-   digitar: su e informar senha do root.
-   PINPAD :
-     - conectar o Pinpad e Pesquisar em qual USB ele esta conectado
-     - utilizando comando: dmesg  serão listadas muitas informações, procurar por GERTEC, ao encontrar criar permissões totais na pasta /dev para a conexão USB. exemplo de um PinPad na USB:
-     - ttyACM0: cd /dev = pasta com todas as portas chmod 777 ttyACM0 = permissões totais ls -l = lista todas as permissõs da pasta /dev
-   Shared Object :
-          - digitar: su e informar senha do root.
-          - copiar a so  PGWebLib.so  para /usr/lib
-          - copiar certificado certificado.crt para o diretoŕio de execução da aplicação
-- Para fazer a instalação clicar no botão instala da aplicação.
-- OBS :  antes de instalar deletar diretório PGWebLib que fica no diretorio de execucao da aplicacao
-         se estiver debugando está em PDVS/bin/Debug/ 
+       - sudo apt-get install monodevelop
 
-2) Para Testar a Venda Selecionar PWOPER_SALE no combo box PWINFO_OPERATION e ativar botão Executa
+ou, entrar via site:
+
+    - A versão da ide deve ser a 5.10 que está também no site: 
+    https://ubuntu.pkgs.org/16.04/ubuntu-universe-amd64/monodevelop_5.10.0.871-2_all.deb.html
+
+### 3) Para testar se o compilador foi instalado, executar o comando abaixo como usuário normal:
+
+       - monodevelop
+
+### 4) Para configurar o ambiente de execução da aplicação, entrar num terminal e digitar: 
+
+       - sudo su
+e informar senha do root
+   
+Com o PINPAD:
+  
+conectar o Pinpad e pesquisar em qual USB ele esta conectado. Digitar o comando:
+ 
+     - dmesg
+ 
+procurar na lista por **GERTEC**, ao encontrar criar permissões totais na pasta /dev para a conexão USB. Exemplo de um PinPad na USB:
+* cdc_acm 1-1:2.0: ttyACM0: USB ACM device *
+
+entrar no diretório /dev
+
+    - cd /dev
+
+para ver se o arquivo/pasta representa o hardware:
+
+    - ls -l ttyACM0
+
+para atribuir permissões totais:
+
+    - chmod 777 ttyACM0
+
+para verificar se a atribuição ficou correta, liste novamente (ls -l ttyACM0):
+
+* root@deliver-lenovo-ideapad-310-14isk-zago:/dev# ls -l ttyACM0 *
+* crwxrwxrwx 1 root dialout 166, 0 nov 13 15:02 ttyACM0 *
+
+### 5) Shared Object:
+
+digitar: 
+
+    - sudo su
+   
+e informar senha do root
+
+fazer Download do lib, e copiar a lib **PGWebLib.so**  para /usr/lib
+
+    - root@user:/home/user/Downloads# cp PGWebLib.so /usr/lib/.
+
+verificar se o certificado **certificado.crt** está no diretoŕio de execução da aplicação
+
+    - root@user:/home/user/Downloads/pdvLinuxPayGoLibC_DotNetCoreCSharp-master# ls -l PDVS/bin/Debug/certificado.crt 
+    - -rw-rw-r-- 1 user user 1537 nov 13 15:01 PDVS/bin/Debug/certificado.crt
+
+antes de instalar, **deletar o diretório PGWebLib** que fica no diretorio de execução da aplicação. Se estiveres debugando, o diretório está no path "PDVS/bin/Debug/".
+
+Para fazer a instalação do **PDC**, clicar no botão instala da aplicação.
+
+
+### 6) Para Testar a Venda Selecionar PWOPER_SALE no combo box PWINFO_OPERATION e ativar botão Executa.
+
