@@ -249,20 +249,6 @@
           </packing>
         </child>
         <child>
-          <widget class="Gtk.Button" id="buttonInstala">
-            <property name="MemberName" />
-            <property name="CanFocus">True</property>
-            <property name="Type">TextOnly</property>
-            <property name="Label" translatable="yes">Instala</property>
-            <property name="UseUnderline">True</property>
-            <signal name="Clicked" handler="OnButtonInstalaClicked" />
-          </widget>
-          <packing>
-            <property name="X">20</property>
-            <property name="Y">12</property>
-          </packing>
-        </child>
-        <child>
           <widget class="Gtk.Button" id="btnCaptura">
             <property name="MemberName" />
             <property name="CanFocus">True</property>

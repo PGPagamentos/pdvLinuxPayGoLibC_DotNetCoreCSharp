@@ -159,7 +159,7 @@ namespace PGWLib
             valorDinheiro = txtValue.Text;
 
             // coloca o simbolo relativo a moeda sendo utilizada
-			//txtValue.Text = string.Format("{0:C}", Convert.ToDouble(valorDinheiro));
+			txtValue.Text = string.Format("{0:C}", Convert.ToDouble(valorDinheiro));
             txtValue.Select(txtValue.Text.Length, 0);
   
         }
@@ -172,7 +172,7 @@ namespace PGWLib
 			}
 
 			// coloca o simbolo relativo a moeda sendo utilizada
-			//txtValue.Text = string.Format("{0:C}", Convert.ToDouble(valorDinheiro));
+			txtValue.Text = string.Format("{0:C}", Convert.ToDouble(valorDinheiro));
         }
     }
 }

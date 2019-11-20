@@ -30,8 +30,6 @@ namespace PDVS
 		
 		private global::Gtk.Button button9;
 		
-		private global::Gtk.Button buttonInstala;
-		
 		private global::Gtk.Button btnCaptura;
 		
 		private global::Gtk.ScrolledWindow GtkScrolledWindow;
@@ -155,25 +153,15 @@ namespace PDVS
 			w12.X = 383;
 			w12.Y = 45;
 			// Container child fixed1.Gtk.Fixed+FixedChild
-			this.buttonInstala = new global::Gtk.Button ();
-			this.buttonInstala.CanFocus = true;
-			this.buttonInstala.Name = "buttonInstala";
-			this.buttonInstala.UseUnderline = true;
-			this.buttonInstala.Label = global::Mono.Unix.Catalog.GetString ("Instala");
-			this.fixed1.Add (this.buttonInstala);
-			global::Gtk.Fixed.FixedChild w13 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.buttonInstala]));
-			w13.X = 20;
-			w13.Y = 12;
-			// Container child fixed1.Gtk.Fixed+FixedChild
 			this.btnCaptura = new global::Gtk.Button ();
 			this.btnCaptura.CanFocus = true;
 			this.btnCaptura.Name = "btnCaptura";
 			this.btnCaptura.UseUnderline = true;
 			this.btnCaptura.Label = global::Mono.Unix.Catalog.GetString ("PW-iPPGetUserData");
 			this.fixed1.Add (this.btnCaptura);
-			global::Gtk.Fixed.FixedChild w14 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.btnCaptura]));
-			w14.X = 24;
-			w14.Y = 80;
+			global::Gtk.Fixed.FixedChild w13 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.btnCaptura]));
+			w13.X = 24;
+			w13.Y = 80;
 			// Container child fixed1.Gtk.Fixed+FixedChild
 			this.GtkScrolledWindow = new global::Gtk.ScrolledWindow ();
 			this.GtkScrolledWindow.Name = "GtkScrolledWindow";
@@ -188,17 +176,17 @@ namespace PDVS
 			this.trvPar.HeadersVisible = false;
 			this.GtkScrolledWindow.Add (this.trvPar);
 			this.fixed1.Add (this.GtkScrolledWindow);
-			global::Gtk.Fixed.FixedChild w16 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.GtkScrolledWindow]));
-			w16.X = 28;
-			w16.Y = 166;
+			global::Gtk.Fixed.FixedChild w15 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.GtkScrolledWindow]));
+			w15.X = 28;
+			w15.Y = 166;
 			// Container child fixed1.Gtk.Fixed+FixedChild
 			this.label5 = new global::Gtk.Label ();
 			this.label5.Name = "label5";
 			this.label5.LabelProp = global::Mono.Unix.Catalog.GetString ("Log da Aplicação");
 			this.fixed1.Add (this.label5);
-			global::Gtk.Fixed.FixedChild w17 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.label5]));
-			w17.X = 666;
-			w17.Y = 41;
+			global::Gtk.Fixed.FixedChild w16 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.label5]));
+			w16.X = 666;
+			w16.Y = 41;
 			// Container child fixed1.Gtk.Fixed+FixedChild
 			this.buttonLimpaLog = new global::Gtk.Button ();
 			this.buttonLimpaLog.CanFocus = true;
@@ -206,9 +194,9 @@ namespace PDVS
 			this.buttonLimpaLog.UseUnderline = true;
 			this.buttonLimpaLog.Label = global::Mono.Unix.Catalog.GetString ("Limpa Log");
 			this.fixed1.Add (this.buttonLimpaLog);
-			global::Gtk.Fixed.FixedChild w18 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.buttonLimpaLog]));
-			w18.X = 531;
-			w18.Y = 540;
+			global::Gtk.Fixed.FixedChild w17 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.buttonLimpaLog]));
+			w17.X = 531;
+			w17.Y = 540;
 			// Container child fixed1.Gtk.Fixed+FixedChild
 			this.btnLimpaParametros = new global::Gtk.Button ();
 			this.btnLimpaParametros.CanFocus = true;
@@ -216,9 +204,9 @@ namespace PDVS
 			this.btnLimpaParametros.UseUnderline = true;
 			this.btnLimpaParametros.Label = global::Mono.Unix.Catalog.GetString ("Limpa Parametros");
 			this.fixed1.Add (this.btnLimpaParametros);
-			global::Gtk.Fixed.FixedChild w19 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.btnLimpaParametros]));
-			w19.X = 27;
-			w19.Y = 536;
+			global::Gtk.Fixed.FixedChild w18 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.btnLimpaParametros]));
+			w18.X = 27;
+			w18.Y = 536;
 			this.Add (this.fixed1);
 			if ((this.Child != null)) {
 				this.Child.ShowAll ();
@@ -231,7 +219,6 @@ namespace PDVS
 			this.btnRemover.Clicked += new global::System.EventHandler (this.OnBtnRemoverClicked);
 			this.cmbOper.Changed += new global::System.EventHandler (this.OnCmbOperChanged);
 			this.button9.Clicked += new global::System.EventHandler (this.OnButtonExecutarClicked);
-			this.buttonInstala.Clicked += new global::System.EventHandler (this.OnButtonInstalaClicked);
 			this.btnCaptura.Clicked += new global::System.EventHandler (this.OnBtnCapturaClicked);
 			this.trvPar.SelectCursorRow += new global::Gtk.SelectCursorRowHandler (this.OnTrvParSelectCursorRow);
 			this.buttonLimpaLog.Clicked += new global::System.EventHandler (this.OnButtonLimpaLogClicked);

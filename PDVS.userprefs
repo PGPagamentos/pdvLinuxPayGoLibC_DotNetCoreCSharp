@@ -1,8 +1,8 @@
 ﻿<Properties StartupItem="PDVS/PDVS.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="PGWLib/Interop.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="PGWLib/FormCurrencyData.cs">
     <Files>
-      <File FileName="PDVS/MainWindow.cs" Line="1" Column="1" />
+      <File FileName="PDVS/MainWindow.cs" Line="92" Column="3" />
       <File FileName="PDVS/ConfirmationWindowDialog.cs" Line="1" Column="1" />
       <File FileName="PGWLib/FormTypedData.Designer.cs" Line="1" Column="1" />
       <File FileName="PGWLib/FormTypedData.resx" Line="1" Column="1" />
@@ -12,10 +12,10 @@
       <File FileName="PDVS/AddParDialog.cs" Line="1" Column="1" />
       <File FileName="PDVS/Program.cs" Line="1" Column="1" />
       <File FileName="PGWLib/FormCurrencyData.Designer.cs" Line="1" Column="1" />
-      <File FileName="PGWLib/FormCurrencyData.cs" Line="1" Column="1" />
+      <File FileName="PGWLib/FormCurrencyData.cs" Line="95" Column="10" />
       <File FileName="PGWLib/CustomObjects.cs" Line="1" Column="1" />
       <File FileName="PGWLib/FormCurrencyData.resx" Line="1" Column="1" />
-      <File FileName="PGWLib/Interop.cs" Line="329" Column="79" />
+      <File FileName="PGWLib/Interop.cs" Line="333" Column="65" />
       <File FileName="PGWLib/FormDisplayMessage.cs" Line="1" Column="1" />
       <File FileName="PGWLib/FormMenu.cs" Line="1" Column="1" />
       <File FileName="PGWLib/Enums.cs" Line="1" Column="1" />
