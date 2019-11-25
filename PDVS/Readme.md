@@ -93,3 +93,7 @@ Para fazer a instalação do **PDC**, clicar no botão instala da aplicação.
 
 ### 6) Para Testar a Venda Selecionar PWOPER_SALE no combo box PWINFO_OPERATION e ativar botão Executa.
 
+### 7) Dados da Versão do Ubuntu (utilizar comando **hostnamectl** para verificar) : 
+       Operating System: Ubuntu 16.04.6 LTS
+       Kernel: Linux 4.15.0-70-generic
+
